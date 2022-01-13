@@ -28,24 +28,27 @@
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+<h1>
+  Triage by step
+</h1>
+<p class="nhsuk-lede-text">
+  Jqcarwc7OfshJxcnRhMcJwQCjbgeonowicn
+</p>
 
-  <div class="nhsuk-grid-row">
 
-    <div class="nhsuk-grid-column-two-thirds">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-row nhsuk-card-group">
 
-      <!-- Change the page heading -->
-      <h1>
-        Triage by step
-      </h1>
+    <div class="nhsuk-grid-column-one-third">
+        {% from 'card/macro.njk' import card %}
 
-      <!-- Add content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-      <p class="nhsuk-lede-text">
-        Jqcarwc7OfshJxcnRhMcJwQCjbgeonowicn
-      </p>
-
-      <p>
-        Cards _
+        {{ card({
+          "href": "#",
+          "clickable": "true",
+          "heading": "Talk to your GP",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "A quick guide for people who have care and support needs and their carers"
+        }) }}
 
         {{ details({
           "classes": "nhsuk-expander",
@@ -57,22 +60,155 @@
             <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
           </ul>"
         }) }}
-      </p>
+        <!-- expander -->
+    </div>
+
+    <div class="nhsuk-grid-column-one-third">
+        {% from 'card/macro.njk' import card %}
+
+        {{ card({
+          "href": "#",
+          "clickable": "true",
+          "heading": "Get an assessment",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "A quick guide for people who have care and support needs and their carers"
+        }) }}
+
+        {{ details({
+          "classes": "nhsuk-expander",
+          "text": "I've already done this",
+          "HTML": "
+          <p>Here is some ....:</p>
+          <ul>
+            <li>Task </li>
+            <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
+          </ul>"
+        }) }}
+        <!-- expander -->
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+        {% from 'card/macro.njk' import card %}
+
+        {{ card({
+          "href": "#",
+          "clickable": "true",
+          "heading": "Treatment",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "A quick guide for people who have care and support needs and their carers"
+        }) }}
+
+        {{ details({
+          "classes": "nhsuk-expander",
+          "text": "I've already done this",
+          "HTML": "
+          <p>Here is some ....:</p>
+          <ul>
+            <li>Task </li>
+            <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
+          </ul>"
+        }) }}
+        <!-- expander -->
+    </div>
+
+    <div class="nhsuk-grid-column-one-third">
+        {% from 'card/macro.njk' import card %}
+
+        {{ card({
+          "href": "#",
+          "clickable": "true",
+          "heading": "Talk to your GP",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "A quick guide for people who have care and support needs and their carers"
+        }) }}
+
+        {{ details({
+          "classes": "nhsuk-expander",
+          "text": "I've already done this",
+          "HTML": "
+          <p>Here is some ....:</p>
+          <ul>
+            <li>Task </li>
+            <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
+          </ul>"
+        }) }}
+        <!-- expander -->
+    </div>
+
+    <div class="nhsuk-grid-column-one-third">
+        {% from 'card/macro.njk' import card %}
+
+        {{ card({
+          "href": "#",
+          "clickable": "true",
+          "heading": "Get an assessment",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "A quick guide for people who have care and support needs and their carers"
+        }) }}
+
+        {{ details({
+          "classes": "nhsuk-expander",
+          "text": "I've already done this",
+          "HTML": "
+          <p>Here is some ....:</p>
+          <ul>
+            <li>Task </li>
+            <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
+          </ul>"
+        }) }}
+        <!-- expander -->
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+        {% from 'card/macro.njk' import card %}
+
+        {{ card({
+          "href": "#",
+          "clickable": "true",
+          "heading": "Treatment",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "A quick guide for people who have care and support needs and their carers"
+        }) }}
+
+        {{ details({
+          "classes": "nhsuk-expander",
+          "text": "I've already done this",
+          "HTML": "
+          <p>Here is some ....:</p>
+          <ul>
+            <li>Task </li>
+            <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
+          </ul>"
+        }) }}
+        <!-- expander -->
+    </div>
+
+  </div>
+
 
 
 
       <h2>Level heading two</h2>
+      {% from 'card/macro.njk' import card %}
 
+      {{ card({
+        "type": "urgent",
+        "heading": "Ask for an urgent GP appointment if:",
+        "descriptionHtml": "
+        <ul>
+          <li>you're an adult and have chickenpox</li>
+          <li>you're pregnant and haven't had chickenpox before and you've been near someone with it </li>
+          <li>you have a weakened immune system and you've been near someone with chickenpox</li>
+          <li>you think your newborn baby has chickenpox</li>
+        </ul>
+         <p>In these situations, your GP can prescribe medicine to prevent complications. You need to take it within 24 hours of the spots coming out.</p>
+        "
+      }) }}
 
       <h3>
         Level heading three
       </h3>
 
 
-<!--      {{ warningCallout({
-        "heading": "School, nursery or work",
-        "HTML": "<p>Stay away from school, nursery or work until all the spots have crusted over. This is usually 5 days after the spots first appeared.</p>"
-      }) }}-->
+
 
       <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
         Page last reviewed: 15 March 2021<br>
