@@ -7446,3 +7446,10 @@ b {
     line-height: 1.2;
   }
 }
+
+.nhsuk-card-group--cypmhs .nhsuk-card {
+  margin-bottom: 1rem !important;
+}
+.nhsuk-card-group--cypmhs .nhsuk-details {
+  margin-bottom: 2.5rem;
+}

@@ -2,7 +2,11 @@
 // COMPONENTS / #LIST-BORDER
 // ==========================================================================
 
-.nhsuk-list--border li {
-  border-bottom: 1px solid $color_nhsuk-grey-4;
-  padding: 8px 0 16px;
+.nhsuk-card-group--cypmhs {
+  .nhsuk-card{
+    margin-bottom:1rem!important;
+  }
+  .nhsuk-details{
+    margin-bottom: 2.5rem;
+  }
 }
