@@ -8,7 +8,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-  Content page example - NHS.UK prototype kit
+  Getting treatment and support for children and young people
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -29,7 +29,7 @@
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 <h1>
-  Triage by step
+  Getting treatment and support for children and young people
 </h1>
 <p class="nhsuk-lede-text">
   Some text plus a CTA to urgent card at the bottom of the page.
@@ -39,15 +39,163 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-row nhsuk-card-group nhsuk-card-group--cypmhs">
 
-    <div class="nhsuk-grid-column-one-third">
+    <div class="nhsuk-grid-column-one-half">
         {% from 'card/macro.njk' import card %}
 
         {{ card({
           "href": "#",
           "clickable": "true",
-          "heading": "Talk to your GP",
+          "heading": "Find out what help is available",
           "headingClasses": "nhsuk-heading-m",
-          "description": "A quick guide for people who have care and support needs and their carers"
+          "description": "There are lots of options for support if you are under 18, including specialist NHS services,
+self-management tools, and charity helplines and services. Read more about what support
+might be available to you."
+        }) }}
+        <!-- details card -->
+        {% from 'details/macro.njk' import details %}
+        {{ details({
+          "text": "I’m not sure what help is right for me / my child",
+          "HTML": "
+          <p>Here is some ....:</p>
+            <ul>
+                <li>Task</li>
+                <li>Task</li>
+                <li>Task</li>
+                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
+            </ul>
+            <p>Sentence.</p>
+          "
+        }) }}
+        <!-- //details card -->
+    </div>
+
+    <div class="nhsuk-grid-column-one-half">
+        {% from 'card/macro.njk' import card %}
+
+        {{ card({
+          "href": "#",
+          "clickable": "true",
+          "heading": "Getting a referral for support",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "For most NHS services you’ll need a referral from a specialist such as a GP or teacher. Find
+out more about being referred to specialist services."
+        }) }}
+        <!-- details card -->
+        {% from 'details/macro.njk' import details %}
+        {{ details({
+          "text": "I can’t get a referral",
+          "HTML": "
+          <p>Here is some ....:</p>
+            <ul>
+                <li>Task</li>
+                <li>Task</li>
+                <li>Task</li>
+                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
+            </ul>
+            <p>Sentence.</p>
+          "
+        }) }}
+        <!-- //details card -->
+    </div>
+
+
+    <div class="nhsuk-grid-column-one-half">
+        {% from 'card/macro.njk' import card %}
+
+        {{ card({
+          "href": "#",
+          "clickable": "true",
+          "heading": "Referring yourself to a service",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "n some cases, depending your age, you can refer yourself to a service. Find out about how
+to refer yourself for support."
+        }) }}
+        <!-- details card -->
+        {% from 'details/macro.njk' import details %}
+        {{ details({
+          "text": "I’ve referred myself but I haven’t heard anything",
+          "HTML": "
+          <p>Here is some ....:</p>
+            <ul>
+                <li>Task</li>
+                <li>Task</li>
+                <li>Task</li>
+                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
+            </ul>
+            <p>Sentence.</p>
+          "
+        }) }}
+        <!-- //details card -->
+    </div>
+
+    <div class="nhsuk-grid-column-one-half">
+        {% from 'card/macro.njk' import card %}
+
+        {{ card({
+          "href": "#",
+          "clickable": "true",
+          "heading": "Having an assessment",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "If you are referred to specialist services you will often have an assessment to work out what
+support might be best for you. Find out what an assessment involves."
+        }) }}
+        <!-- details card -->
+        {% from 'details/macro.njk' import details %}
+        {{ details({
+          "text": "I’m unhappy with the result of my assessment",
+          "HTML": "
+          <p>Here is some ....:</p>
+            <ul>
+                <li>Task</li>
+                <li>Task</li>
+                <li>Task</li>
+                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
+            </ul>
+            <p>Sentence.</p>
+          "
+        }) }}
+        <!-- //details card -->
+    </div>
+
+    <div class="nhsuk-grid-column-one-half">
+        {% from 'card/macro.njk' import card %}
+
+        {{ card({
+          "href": "#",
+          "clickable": "true",
+          "heading": "Waiting for treatment",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "If you’re referred for therapy after your assessment, it may be some time before you see
+someone. Find out what you can do in the meantime."
+        }) }}
+        <!-- details card -->
+        {% from 'details/macro.njk' import details %}
+        {{ details({
+          "text": "
+I haven’t heard anything for a long time",
+          "HTML": "
+          <p>Here is some ....:</p>
+            <ul>
+                <li>Task</li>
+                <li>Task</li>
+                <li>Task</li>
+                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
+            </ul>
+            <p>Sentence.</p>
+          "
+        }) }}
+        <!-- //details card -->
+    </div>
+
+    <div class="nhsuk-grid-column-one-half">
+        {% from 'card/macro.njk' import card %}
+
+        {{ card({
+          "href": "#",
+          "clickable": "true",
+          "heading": "What to expect from treatment",
+          "headingClasses": "nhsuk-heading-m",
+          "description": "XXX"
         }) }}
         <!-- details card -->
         {% from 'details/macro.njk' import details %}
@@ -67,42 +215,15 @@
         <!-- //details card -->
     </div>
 
-    <div class="nhsuk-grid-column-one-third">
+    <div class="nhsuk-grid-column-one-half">
         {% from 'card/macro.njk' import card %}
 
         {{ card({
           "href": "#",
           "clickable": "true",
-          "heading": "Get an assessment",
+          "heading": "Finishing treatment",
           "headingClasses": "nhsuk-heading-m",
-          "description": "A quick guide for people who have care and support needs and their carers"
-        }) }}
-        <!-- details card -->
-        {% from 'details/macro.njk' import details %}
-        {{ details({
-          "text": "I've already done this",
-          "HTML": "
-          <p>Here is some ....:</p>
-            <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
-            </ul>
-            <p>Sentence.</p>
-          "
-        }) }}
-        <!-- //details card -->
-    </div>
-    <div class="nhsuk-grid-column-one-third">
-        {% from 'card/macro.njk' import card %}
-
-        {{ card({
-          "href": "#",
-          "clickable": "true",
-          "heading": "Treatment",
-          "headingClasses": "nhsuk-heading-m",
-          "description": "A quick guide for people who have care and support needs and their carers"
+          "description": "XXX"
         }) }}
         <!-- details card -->
         {% from 'details/macro.njk' import details %}
@@ -122,15 +243,15 @@
         <!-- //details card -->
     </div>
 
-    <div class="nhsuk-grid-column-one-third">
+    <div class="nhsuk-grid-column-one-half">
         {% from 'card/macro.njk' import card %}
 
         {{ card({
           "href": "#",
           "clickable": "true",
-          "heading": "Talk to your GP",
+          "heading": "Moving on to adult services",
           "headingClasses": "nhsuk-heading-m",
-          "description": "A quick guide for people who have care and support needs and their carers"
+          "description": "XXX"
         }) }}
         <!-- details card -->
         {% from 'details/macro.njk' import details %}
@@ -150,60 +271,7 @@
         <!-- //details card -->
     </div>
 
-    <div class="nhsuk-grid-column-one-third">
-        {% from 'card/macro.njk' import card %}
 
-        {{ card({
-          "href": "#",
-          "clickable": "true",
-          "heading": "Get an assessment",
-          "headingClasses": "nhsuk-heading-m",
-          "description": "A quick guide for people who have care and support needs and their carers"
-        }) }}
-        <!-- details card -->
-        {% from 'details/macro.njk' import details %}
-        {{ details({
-          "text": "I've already done this",
-          "HTML": "
-          <p>Here is some ....:</p>
-            <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
-            </ul>
-            <p>Sentence.</p>
-          "
-        }) }}
-        <!-- //details card -->
-    </div>
-    <div class="nhsuk-grid-column-one-third">
-        {% from 'card/macro.njk' import card %}
-
-        {{ card({
-          "href": "#",
-          "clickable": "true",
-          "heading": "Treatment",
-          "headingClasses": "nhsuk-heading-m",
-          "description": "A quick guide for people who have care and support needs and their carers"
-        }) }}
-        <!-- details card -->
-        {% from 'details/macro.njk' import details %}
-        {{ details({
-          "text": "I've already done this",
-          "HTML": "
-          <p>Here is some ....:</p>
-            <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
-            </ul>
-            <p>Sentence.</p>
-          "
-        }) }}
-        <!-- //details card -->
-    </div>
 
   </div>
 
