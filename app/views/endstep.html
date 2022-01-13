@@ -1,0 +1,121 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- Set the page title -->
+{% block pageTitle %}
+  Getting a referral for support
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<h1>
+    Getting a referral for support
+</h1>
+<p>For most NHS services you’ll need a referral from a professional such as a GP or teacher.</p>
+<p>
+    A referral is when a professional puts you in contact with a specialist service that can offer you help, 
+    support and treatment specific to your issues. Some services accept self-referrals, which is where you 
+    contact the service yourself. 
+</p>
+<p>Here are some steps you can take to try and get the right support for you</p>
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+    <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            Speak to your GP
+          </span>
+        </h2>
+      </div>
+      <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+        <p class='govuk-body'>WTE blurb</p>
+      </div>
+    </div>
+    <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+            Find out if anyone else can refer you
+          </span>
+        </h2>
+      </div>
+      <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+        <p class='govuk-body'>How to blurb</p>
+      </div>
+    </div>
+    <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+            Find out if you can refer yourself or your child
+          </span>
+        </h2>
+      </div>
+      <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+        <p class='govuk-body'>How to blurb</p>
+      </div>
+    </div>
+    <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+            Ask which service you are being referred to
+          </span>
+        </h2>
+      </div>
+      <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+        <p class='govuk-body'>How to blurb</p>
+      </div>
+    </div>
+    <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                Ask how long you’ll have to wait before you hear from the service
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+          <p class='govuk-body'>How to blurb</p>
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                What to do if you’re struggling to get a referral but you think you need one.
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+          <p class='govuk-body'>How to blurb. Not sure what the answer is.</p>
+        </div>
+      </div>
+  </div>
+
+
+
+
+      <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
+        Page last reviewed: 15 March 2021<br>
+        Next review due: 15 March 2024
+      </p>
+
+      <!-- End of content -->
+
+    </div>
+
+  </div>
+{% endblock %}
