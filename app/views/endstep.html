@@ -8,9 +8,25 @@
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+  {% from 'breadcrumb/macro.njk' import breadcrumb %}
   {{ breadcrumb({
-    href: "/",
-    text: "Home"
+  items: [
+    {
+      href: "https://www.nhs.uk",
+      text: "Home"
+    },
+    {
+      href: "https://www.nhs.uk/mental-health/",
+      text: "Mental health"
+    },
+    {
+      href: "triage_steps",
+      text: "Mental health services for young people"
+    }
+  ],
+  href: "#",
+  text: "Getting a referral for support"
+
   }) }}
 {% endblock %}
 
@@ -27,9 +43,9 @@
 </h1>
 <p>For most NHS services you’ll need a referral from a professional such as a GP or teacher.</p>
 <p>
-    A referral is when a professional puts you in contact with a specialist service that can offer you help, 
-    support and treatment specific to your issues. Some services accept self-referrals, which is where you 
-    contact the service yourself. 
+    A referral is when a professional puts you in contact with a specialist service that can offer you help,
+    support and treatment specific to your issues. Some services accept self-referrals, which is where you
+    contact the service yourself.
 </p>
 <p>Here are some steps you can take to try and get the right support for you</p>
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">

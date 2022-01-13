@@ -18,6 +18,26 @@
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+  {% from 'breadcrumb/macro.njk' import breadcrumb %}
+  {{ breadcrumb({
+  items: [
+    {
+      href: "https://www.nhs.uk",
+      text: "Home"
+    },
+    {
+      href: "https://www.nhs.uk/mental-health/",
+      text: "Mental health"
+    },
+    {
+      href: "/level-one/level-two/level-three",
+      text: "Mental health conditions "
+    }
+  ],
+  href: "https://www.nhs.uk/mental-health/conditions/bulimia/",
+  text: "Bulimia"
+
+  }) }}
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -54,6 +74,15 @@
         </section>
         <section>
           <h2 data-block-key="4ub3d">Getting help for bulimia</h2><p data-block-key="qre0a">Getting help and support as soon as possible gives you the best chance of recovering from bulimia.</p><p data-block-key="s1brx">If you think you may have bulimia, see a GP as soon as you can.</p><p data-block-key="flzlx">They'll ask you questions about your eating habits and how you're feeling, and will check your overall health and weight.</p><p data-block-key="4zvai">If they think you may have bulimia or another eating disorder, they should refer you to an eating disorder specialist or team of specialists.</p><p data-block-key="h4luh">It can be very hard to admit you have a problem and ask for help. It may&nbsp;make things easier if&nbsp;you bring a friend or loved one with you to your appointment.</p><p data-block-key="yaq27">You can also talk in confidence to an adviser from the eating disorders charity <a href="http://www.b-eat.co.uk/">Beat</a> by calling&nbsp;their adult helpline on 0808 801 0677 or&nbsp;youth helpline on 0808 801 0711.</p><h3 data-block-key="3jrmt">Getting help for someone else</h3><p data-block-key="9ajb2">If you're concerned that someone close to you may have bulimia, let them know you're worried about them and encourage them to see a GP. You could offer to go along with them.</p><p data-block-key="b524b">Read more about <a href="/mental-health/feelings-symptoms-behaviours/behaviours/eating-disorders/advice-for-parents/">talking to your child about eating disorders</a> and <a href="/mental-health/advice-for-life-situations-and-events/how-to-help-someone-with-eating-disorder/">supporting someone with an eating disorder</a>.</p>
+
+          <!-- addition of the CYPMHS card-->
+            {% from 'inset-text/macro.njk' import insetText %}
+            {{ insetText({
+            "HTML": "<h3>Are you under 18?</h3><p>There is different treatment and support available if you’re under 18.</p>
+            <p><a href=\"/triage_steps\">Find out more about getting support for children and young people.</a></p>"
+            }) }}
+          <!-- //addition of the CYPMHS card-->
+
         </section>
         <section>
           <h2 data-block-key="ksuya">Treatment for bulimia</h2><p data-block-key="a4vj8">You can recover from bulimia, but it may take time and recovery will be different for everyone.</p><p data-block-key="efhiy">Your treatment plan will be tailored to you and should take into account any other support you might need, such as for depression or anxiety.</p><p data-block-key="5apkd">If you're over 18,&nbsp;you'll probably be offered a guided self-help programme. This involves working through a self-help book, and often includes keeping a diary and making a plan for your meals.</p><p data-block-key="8cpd7">You'll be supported by a therapist during this process. You may also be offered <a href="/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/cognitive-behavioural-therapy-cbt/overview/">cognitive behavioural therapy (CBT)</a>.</p><p data-block-key="n2hyu">If you're under 18, you may be offered family therapy as well as CBT.</p><p data-block-key="q2cky"><a href="/mental-health/conditions/bulimia/treatment/">Read more about treatments for bulimia</a></p>
@@ -81,7 +110,7 @@
             </div>
           </div>
         </section>
-        <section>
+        <!--<section>
           {% from 'card/macro.njk' import card %}
           {{ card({
             "type": "non-urgent",
@@ -91,14 +120,8 @@
             <p><a href=\"/triage_steps\">Find out more about getting support for children and young people.</a></p>
             "
           }) }}
-        </section>
-        <section>
-          {% from 'inset-text/macro.njk' import insetText %}
-          {{ insetText({
-          "HTML": "<h3>Are you under 18?</h3><p>There is different treatment and support available if you’re under 18.</p>
-          <p><a href=\"/triage_steps\">Find out more about getting support for children and young people.</a></p>"
-          }) }}
-        </section>
+        </section>-->
+
 
 
 

@@ -14,9 +14,21 @@
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+  {% from 'breadcrumb/macro.njk' import breadcrumb %}
   {{ breadcrumb({
-    href: "/",
-    text: "Home"
+  items: [
+    {
+      href: "https://www.nhs.uk",
+      text: "Home"
+    },
+    {
+      href: "https://www.nhs.uk/mental-health/",
+      text: "Mental health"
+    }
+  ],
+  href: "#",
+  text: "Mental health services for young people"
+
   }) }}
 {% endblock %}
 
@@ -39,7 +51,7 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-row nhsuk-card-group nhsuk-card-group--cypmhs">
 
-    <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
         {{ card({
@@ -69,11 +81,11 @@ might be available to you."
         <!-- //details card -->
     </div>
 
-    <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
         {{ card({
-          "href": "#",
+          "href": "/endstep",
           "clickable": "true",
           "heading": "Getting a referral for support",
           "headingClasses": "nhsuk-heading-m",
@@ -99,7 +111,7 @@ out more about being referred to specialist services."
     </div>
 
 
-    <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
         {{ card({
@@ -107,7 +119,7 @@ out more about being referred to specialist services."
           "clickable": "true",
           "heading": "Referring yourself to a service",
           "headingClasses": "nhsuk-heading-m",
-          "description": "n some cases, depending your age, you can refer yourself to a service. Find out about how
+          "description": "In some cases, depending your age, you can refer yourself to a service. Find out about how
 to refer yourself for support."
         }) }}
         <!-- details card -->
@@ -128,7 +140,7 @@ to refer yourself for support."
         <!-- //details card -->
     </div>
 
-    <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
         {{ card({
@@ -157,7 +169,7 @@ support might be best for you. Find out what an assessment involves."
         <!-- //details card -->
     </div>
 
-    <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
         {{ card({
@@ -187,20 +199,20 @@ I haven’t heard anything for a long time",
         <!-- //details card -->
     </div>
 
-    <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
         {{ card({
           "href": "#",
           "clickable": "true",
-          "heading": "What to expect from treatment",
+          "heading": "Having treatment",
           "headingClasses": "nhsuk-heading-m",
-          "description": "XXX"
+          "description": "Find out about the basics about what to expect from your treatment."
         }) }}
         <!-- details card -->
         {% from 'details/macro.njk' import details %}
         {{ details({
-          "text": "I've already done this",
+          "text": "I don’t think my therapy’s working",
           "HTML": "
           <p>Here is some ....:</p>
             <ul>
@@ -215,7 +227,7 @@ I haven’t heard anything for a long time",
         <!-- //details card -->
     </div>
 
-    <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
         {{ card({
@@ -223,12 +235,12 @@ I haven’t heard anything for a long time",
           "clickable": "true",
           "heading": "Finishing treatment",
           "headingClasses": "nhsuk-heading-m",
-          "description": "XXX"
+          "description": "Things to think about if your treatment is coming to an end."
         }) }}
         <!-- details card -->
         {% from 'details/macro.njk' import details %}
         {{ details({
-          "text": "I've already done this",
+          "text": "I still need support",
           "HTML": "
           <p>Here is some ....:</p>
             <ul>
@@ -243,7 +255,7 @@ I haven’t heard anything for a long time",
         <!-- //details card -->
     </div>
 
-    <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
         {{ card({
@@ -251,12 +263,12 @@ I haven’t heard anything for a long time",
           "clickable": "true",
           "heading": "Moving on to adult services",
           "headingClasses": "nhsuk-heading-m",
-          "description": "XXX"
+          "description": "How your therapy might start to change when you turn 18"
         }) }}
         <!-- details card -->
         {% from 'details/macro.njk' import details %}
         {{ details({
-          "text": "I've already done this",
+          "text": "How do I find out if I can still get support?",
           "HTML": "
           <p>Here is some ....:</p>
             <ul>
