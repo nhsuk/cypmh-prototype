@@ -1,12 +1,14 @@
 # NHS.UK prototype kit
 
-Visit the <a href="http://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK prototype kit site</a> to download the latest version and read the documentation.
-
-## About the NHS.UK prototype kit
 
 This is a prototype for NHS CYPMHS
 
-<!-- ## Security
+<!-- Visit the <a href="http://nhsuk-prototype-kit.azurewebsites.net/docs">NHS.UK prototype kit site</a> to download the latest version and read the documentation.
+
+
+
+
+## Security
 
  If you publish your prototypes online, they must be protected by a <a href="http://nhsuk-prototype-kit.azurewebsites.net/docs/how-tos/heroku">username and password</a>. This is to prevent members of the public finding prototypes and thinking they are real services.
 
