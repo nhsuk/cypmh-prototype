@@ -231,11 +231,24 @@ I haven’t heard anything for a long time",
 
   </div>
 
+  <div class="nhsuk-grid-column-two-thirds">
+      <h2>Where to get urgent help</h2>
+      <p>If you or a loved one are struggling and facing a mental health crisis, you can call your local NHS urgent mental health helpline any time of day or night.</p>
+      {% from 'action-link/macro.njk' import actionLink %}
 
+      {{ actionLink({
+        "text": "Find a local NHS urgent mental health helpline",
+        "href": "https://www.nhs.uk/service-search/mental-health/find-an-urgent-mental-health-helpline"
+      }) }}
 
+      <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
+        Page last reviewed: 15 March 2021<br>
+        Next review due: 15 March 2024
+      </p>
+  </div>
+      <!-- //addition of the CYPMHS card-->
 
-      <h2>Level heading two</h2>
-      {% from 'card/macro.njk' import card %}
+      <!--{% from 'card/macro.njk' import card %}
 
       {{ card({
         "type": "urgent",
@@ -249,19 +262,14 @@ I haven’t heard anything for a long time",
         </ul>
          <p>In these situations, your GP can prescribe medicine to prevent complications. You need to take it within 24 hours of the spots coming out.</p>
         "
-      }) }}
-
-      <h3>
-        Level heading three
-      </h3>
+      }) }}-->
 
 
 
 
-      <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
-        Page last reviewed: 15 March 2021<br>
-        Next review due: 15 March 2024
-      </p>
+
+
+
 
       <!-- End of content -->
 
