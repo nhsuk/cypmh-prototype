@@ -45,13 +45,13 @@
 </h1>
 <p class="nhsuk-lede-text">
   If you are under 18 you can get support for mental health conditions from children and young people’s mental health services (CYPMHS). You may also see this called children and adolescent mental health services (CAMHS).</p>
-  <p class="nhsuk-lede-text">Find out below how you can access this support. 
+  <p class="nhsuk-lede-text">Find out below how you can access this support.
 </p>
 
 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-row nhsuk-card-group nhsuk-card-group--cypmhs">
-
+<!--FIND OUT...-->
     <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
@@ -60,28 +60,20 @@
           "clickable": "true",
           "heading": "Find out what help is available",
           "headingClasses": "nhsuk-heading-m",
-          "description": "There are lots of options for support if you are under 18, including specialist NHS services,
-self-management tools, and charity helplines and services. Read more about what support
-might be available to you."
+          "description": "There are lots of options for support if you are under 18, including specialist NHS services, self-management tools, and charity helplines and services. Read more about what support might be available to you."
         }) }}
         <!-- details card -->
         {% from 'details/macro.njk' import details %}
         {{ details({
           "text": "I’m not sure what help is right for me / my child",
           "HTML": "
-          <p>Here is some ....:</p>
-            <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
-            </ul>
-            <p>Sentence.</p>
+          <p>You can speak to your GP about what support might be right for you. They can suggest charity services or self-management resources that might be suitable. </p>
+          <p>If they refer you to specialist services, you’ll have an assessment to work out what support might be best for you.</p>
           "
         }) }}
         <!-- //details card -->
     </div>
-
+<!--GETTING A...-->
     <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
@@ -98,20 +90,14 @@ out more about being referred to specialist services."
         {{ details({
           "text": "I can’t get a referral",
           "HTML": "
-          <p>Here is some ....:</p>
-            <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
-            </ul>
-            <p>Sentence.</p>
+          <p>If you’ve tried all ways of being referred to mental health services without success <a href=\"https://www.mind.org.uk/information-support/guides-to-support-and-services/advocacy/what-is-advocacy/\">Mind</a> or
+<a href=\"https://www.nhs.uk/nhs-services/hospitals/what-is-pals-patient-advice-and-liaison-service/\">PALS</a> may be able to advocate for you and help you get the support you need.</p>
           "
         }) }}
         <!-- //details card -->
     </div>
 
-
+<!--REFERRING YOURSELF...-->
     <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
@@ -128,19 +114,12 @@ to refer yourself for support."
         {{ details({
           "text": "I’ve referred myself but I haven’t heard anything",
           "HTML": "
-          <p>Here is some ....:</p>
-            <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
-            </ul>
-            <p>Sentence.</p>
+          <p>Contact the service you’ve referred yourself to and ask how long it will be before they get in touch.</p>
           "
         }) }}
         <!-- //details card -->
     </div>
-
+<!--HAVING AN...-->
     <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
@@ -149,27 +128,20 @@ to refer yourself for support."
           "clickable": "true",
           "heading": "Having an assessment",
           "headingClasses": "nhsuk-heading-m",
-          "description": "If you are referred to specialist services you will often have an assessment to work out what
-support might be best for you. Find out what an assessment involves."
+          "description": "If you are referred to specialist services you will often have an assessment to work out what support might be best for you. Find out what an assessment involves."
         }) }}
         <!-- details card -->
         {% from 'details/macro.njk' import details %}
         {{ details({
           "text": "I’m unhappy with the result of my assessment",
           "HTML": "
-          <p>Here is some ....:</p>
-            <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
-            </ul>
-            <p>Sentence.</p>
+          <p>Go back to your referrer and discuss other options with them. It will help if you have a record of why the service have said they can’t help.</p>
+          <p>You can also do your own research for other services – the <a href=\"https://www.annafreud.org/on-my-mind/youth-wellbeing/\">Anna Freud Centre’s Youth Wellbeing Directory</a> might be a good starting point.</p>
           "
         }) }}
         <!-- //details card -->
     </div>
-
+<!--WAITING FOR...-->
     <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
@@ -178,8 +150,7 @@ support might be best for you. Find out what an assessment involves."
           "clickable": "true",
           "heading": "Waiting for treatment",
           "headingClasses": "nhsuk-heading-m",
-          "description": "If you’re referred for therapy after your assessment, it may be some time before you see
-someone. Find out what you can do in the meantime."
+          "description": "If you’re referred for therapy after your assessment, it may be some time before you see someone. Find out what you can do in the meantime."
         }) }}
         <!-- details card -->
         {% from 'details/macro.njk' import details %}
@@ -187,19 +158,12 @@ someone. Find out what you can do in the meantime."
           "text": "
 I haven’t heard anything for a long time",
           "HTML": "
-          <p>Here is some ....:</p>
-            <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
-            </ul>
-            <p>Sentence.</p>
+          <p></p>
           "
         }) }}
         <!-- //details card -->
     </div>
-
+<!--HAVING TREATMENT...-->
     <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
@@ -215,19 +179,12 @@ I haven’t heard anything for a long time",
         {{ details({
           "text": "I don’t think my therapy’s working",
           "HTML": "
-          <p>Here is some ....:</p>
-            <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
-            </ul>
-            <p>Sentence.</p>
+          <p></p>
           "
         }) }}
         <!-- //details card -->
     </div>
-
+<!--FINISHING TREATMENT...-->
     <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
@@ -243,19 +200,12 @@ I haven’t heard anything for a long time",
         {{ details({
           "text": "I still need support",
           "HTML": "
-          <p>Here is some ....:</p>
-            <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
-            </ul>
-            <p>Sentence.</p>
+          <p></p>
           "
         }) }}
         <!-- //details card -->
     </div>
-
+<!--MOVING ON...-->
     <div class="nhsuk-grid-column-two-thirds">
         {% from 'card/macro.njk' import card %}
 
@@ -264,21 +214,14 @@ I haven’t heard anything for a long time",
           "clickable": "true",
           "heading": "Moving on to adult services",
           "headingClasses": "nhsuk-heading-m",
-          "description": "How your therapy might start to change when you turn 18"
+          "description": "How your therapy might start to change when you turn 18."
         }) }}
         <!-- details card -->
         {% from 'details/macro.njk' import details %}
         {{ details({
           "text": "How do I find out if I can still get support?",
           "HTML": "
-          <p>Here is some ....:</p>
-            <ul>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task</li>
-                <li>Task <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>)</li>
-            </ul>
-            <p>Sentence.</p>
+          <p></p>
           "
         }) }}
         <!-- //details card -->
