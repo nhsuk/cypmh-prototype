@@ -1,0 +1,95 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout_minihub.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Getting treatment and support for children and young people</h1>
+{% from 'contents-list/macro.njk' import contentsList %}
+
+{{ contentsList({
+  items: [
+    {
+      href: "/",
+      text: "Overview",
+      current: "true"
+    },
+    {
+      href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/symptoms/",
+      text: "NHS services"
+    },
+    {
+      href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/getting-diagnosed/",
+      text: "Non-NHS services"
+    }
+    ,
+    {
+      href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/treatment/",
+      text: "Support for parents"
+    }
+    ,
+    {
+      href: "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/living-with-amd/",
+      text: "Living with AMD"
+    }
+  ]
+}) }}
+
+
+    <h2>Overview</h2>
+    <p class="nhsuk-lede-text">
+      If you are under 18 you can get support for mental health conditions from children and young people’s mental health services (CYPMHS). You may also see this called children and adolescent mental health services (CAMHS).</p>
+      <p class="nhsuk-lede-text">Find out below how you can access this support.</p>
+
+      <div> what else needs to go on this page</div>
+
+      {% from 'card/macro.njk' import card %}
+      {{ card({
+          "type": "urgent",
+          "heading": "Find a local NHS urgent mental health helpline",
+          "descriptionHtml": "
+          <p>If you or a loved one are struggling and facing a mental health crisis, you can call your local NHS urgent mental health helpline any time of day or night.</p>
+          "
+        }) }}
+
+        {% from 'pagination/macro.njk' import pagination %}
+
+        {{ pagination({
+          "previousUrl": "#",
+          "previousPage": "",
+          "nextUrl": "#",
+          "nextPage": "NHS Services"
+        }) }}
+
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
