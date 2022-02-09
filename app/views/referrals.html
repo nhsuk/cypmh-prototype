@@ -1,0 +1,157 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout_minihub.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+    {% from 'breadcrumb/macro.njk' import breadcrumb %}
+    {{ breadcrumb({
+    items: [
+      {
+        href: "https://www.nhs.uk/mental-health/",
+        text: "Mental health"
+      },
+      {
+        href: "/overview",
+        text: "Mental health services for young people"
+      }
+    ],
+    href: "#",
+    text: "Referrals"
+
+    }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Referrals</h1>
+    <p class="nhsuk-lede-text">
+      Lead text - At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+
+
+    <h2>Subheading</h2>
+    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+
+
+
+          <div>
+
+            <!-- 1st task -->
+            {% from 'details/macro.njk' import details %}
+              {{ details({
+                "classes": "nhsuk-expander",
+                "text": "Do a thing 1",
+                "HTML": "
+                <p>You can see your GP records by:</p>
+                <ul>
+                  <li>asking for them at your GP surgery </li>
+                  <li>going online to see them (if you have signed up for <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
+                </ul>"
+              }) }}
+
+              <!-- 2nd task -->
+              {% from 'details/macro.njk' import details %}
+                {{ details({
+                  "classes": "nhsuk-expander",
+                  "text": "Do a thing 2",
+                  "HTML": "
+                  <p>You can see your GP records by:</p>
+                  <ul>
+                    <li>asking for them at your GP surgery </li>
+                    <li>going online to see them (if you have signed up for <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
+                  </ul>"
+                }) }}
+
+                <!-- 3rd task -->
+                {% from 'details/macro.njk' import details %}
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "Do a thing 3",
+                    "HTML": "
+                    <p>You can see your GP records by:</p>
+                    <ul>
+                      <li>asking for them at your GP surgery </li>
+                      <li>going online to see them (if you have signed up for <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
+                    </ul>"
+                  }) }}
+
+                  <!-- 4th task -->
+                  {% from 'details/macro.njk' import details %}
+                    {{ details({
+                      "classes": "nhsuk-expander",
+                      "text": "Do a thing 4",
+                      "HTML": "
+                      <p>You can see your GP records by:</p>
+                      <ul>
+                        <li>asking for them at your GP surgery </li>
+                        <li>going online to see them (if you have signed up for <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
+                      </ul>"
+                    }) }}
+
+<p> Is the following an expander or inline text or a card? Feels like it should be something different</p>
+                    <!-- can't task -->
+                    {% from 'details/macro.njk' import details %}
+                      {{ details({
+                        "classes": "nhsuk-expander",
+                        "text": "Can't do a thing 4",
+                        "HTML": "
+                        <p>You can see your GP records by:</p>
+                        <ul>
+                          <li>asking for them at your GP surgery </li>
+                          <li>going online to see them (if you have signed up for <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
+                        </ul>"
+                      }) }}
+
+
+
+
+
+
+      </div>
+
+      {% from 'card/macro.njk' import card %}
+      {{ card({
+          "type": "urgent",
+          "heading": "Find a local NHS urgent mental health helpline",
+          "descriptionHtml": "
+          <p>If you or a loved one are struggling and facing a mental health crisis, you can call your local NHS urgent mental health helpline any time of day or night.</p>
+          "
+        }) }}
+
+
+
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
