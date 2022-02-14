@@ -51,74 +51,186 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1>Mental health services for children and young people</h1>
-{% from 'contents-list/macro.njk' import contentsList %}
+    {% from 'contents-list/macro.njk' import contentsList %}
 
-{{ contentsList({
-  items: [
-    {
-      href: "/overview",
-      text: "Overview"
-    },
-    {
-      href: "/nhs-services",
-      text: "NHS services",
-      current: "true"
-    },
-    {
-      href: "#",
-      text: "Non-NHS services"
-    }
-    ,
-    {
-      href: "#",
-      text: "Support for parents"
-    }
-  ]
-}) }}
-
+    {{ contentsList({
+      items: [
+        {
+          href: "/overview",
+          text: "Overview"
+        },
+        {
+          href: "/nhs-services",
+          text: "NHS services",
+          current: "true"
+        },
+        {
+          href: "#",
+          text: "Non-NHS services"
+        }
+        ,
+        {
+          href: "#",
+          text: "Support for parents"
+        }
+      ]
+    }) }}
 
     <h2>Overview</h2>
-    <p class="nhsuk-lede-text">
-      Lead text</p>
-
-      <div>
-
-        <h3>Heading for steps</h3>
-
-        <p><em>[NHS steps component goes here and will include:]</em></p>
-        <ul>
-          <li><a href="/referrals">Referrals</a></li>
-          <li>Triage</li>
-          <li>Appointment</li>
-          <li>Treatment</li>
-          <li>Transfer out to adult services</li>
-        </ul>
-
+    <p class="nhsuk-lede-text">Lead text</p>
+    <div>
+      <h3>Heading for steps</h3>
+      <p>Paragraph for steps navigation?</p>
+      <div id="step-by-step-navigation" class="app-step-nav app-step-nav--large app-step-nav--active" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all" data-hide-all-text="Hide all">
+        <ol class="app-step-nav__steps">
+    <!-- step 1 -->
+          <li class="app-step-nav__step js-step" id="Referrals" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="1">
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="nhsuk-u-visually-hidden">Step</span> 1
+                    </span>
+                  </span>
+                </span>
+                <span class="js-step-title">
+                  Referrals
+                </span>
+              </h2>
+            </div>
+            <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-check-youre-allowed-to-drive-1">
+              <div class="app-step-nav__paragraph">
+                <h3>Subheading</h3>
+                <p class="app-step-nav__paragraph">Paragraph <a href="/referrals">Link to Referrals page</a></p>
+              </div>
+            </div>
+          </li>
+    <!-- step 2-->
+          <li class="app-step-nav__step js-step" id="triage" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="2">
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="nhsuk-u-visually-hidden">Step</span> 2
+                    </span>
+                  </span>
+                </span>
+                <span class="js-step-title">
+                  Triage
+                </span>
+              </h2>
+            </div>
+            <div class="app-step-nav__panel js-panel js-hidden" id="triage-2">
+              <h3>Subheading</h3>
+              <p class="app-step-nav__paragraph">Paragraph</p>
+            </div>
+          </li>
+    <!-- step 3-->
+          <li class="app-step-nav__step js-step" id="appointments" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="3">
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="nhsuk-u-visually-hidden">Step</span> 3
+                    </span>
+                  </span>
+                </span>
+                <span class="js-step-title">
+                  Appointments
+                </span>
+              </h2>
+            </div>
+            <div class="app-step-nav__panel js-panel js-hidden" id="appointments-2">
+              <h3>Subheading</h3>
+              <p class="app-step-nav__paragraph">Paragraph</p>
+            </div>
+          </li>
+    <!-- step 4 -->
+          <li class="app-step-nav__step js-step" id="treatment" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="5">
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="nhsuk-u-visually-hidden">Step</span> 4
+                    </span>
+                  </span>
+                </span>
+                <span class="js-step-title">
+                  Treatment
+                </span>
+              </h2>
+            </div>
+            <div class="app-step-nav__panel js-panel js-hidden" id="treatment-2">
+              <h3>Subheading</h3>
+              <p class="app-step-nav__paragraph">Paragraph</p>
+            </div>
+          </li>
+    <!-- step 5 -->
+          <li class="app-step-nav__step js-step" id="transfer" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="7">
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="nhsuk-u-visually-hidden">Step</span> 5
+                    </span>
+                  </span>
+                </span>
+                <span class="js-step-title">
+                  Transfer out to adult services
+                </span>
+              </h2>
+            </div>
+            <div class="app-step-nav__panel js-panel js-hidden" id="transfer-2">
+              <h3>Subheading</h3>
+              <p class="app-step-nav__paragraph">Paragraph</p>
+            </div>
+          </li>
+        </ol>
       </div>
+    </div>
+    <div>
 
-      <div>
+      {% from 'inset-text/macro.njk' import insetText %}
 
-        waiting card goes here
+      {{ insetText({
+        "HTML": "<p>Waiting text <a href=\"https://yellowcard.mhra.gov.uk/\" title=\"External website\">Waiting link</a>.</p>"
+      }) }}
 
-      </div>
+    </div>
+    {% from 'card/macro.njk' import card %}
+    {{ card({
+        "type": "urgent",
+        "heading": "Find a local NHS urgent mental health helpline",
+        "descriptionHtml": "
+        <p>If you or a loved one are struggling and facing a mental health crisis, you can call your local NHS urgent mental health helpline any time of day or night.</p>
+        "
+      }) }}
 
-      {% from 'card/macro.njk' import card %}
-      {{ card({
-          "type": "urgent",
-          "heading": "Find a local NHS urgent mental health helpline",
-          "descriptionHtml": "
-          <p>If you or a loved one are struggling and facing a mental health crisis, you can call your local NHS urgent mental health helpline any time of day or night.</p>
-          "
-        }) }}
+      {% from 'pagination/macro.njk' import pagination %}
 
-        {% from 'pagination/macro.njk' import pagination %}
+      {{ pagination({
+        "previousUrl": "/overview",
+        "previousPage": "Overview",
+        "nextUrl": "#",
+        "nextPage": "Non-NHS Services"
+      }) }}
 
-        {{ pagination({
-          "previousUrl": "/overview",
-          "previousPage": "Overview",
-          "nextUrl": "#",
-          "nextPage": "Non-NHS Services"
-        }) }}
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
 
 
       <!-- End of content -->
