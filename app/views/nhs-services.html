@@ -65,12 +65,12 @@
           current: "true"
         },
         {
-          href: "#",
+          href: "/non-nhs-services",
           text: "Non-NHS services"
         }
         ,
         {
-          href: "#",
+          href: "/support-for-parents",
           text: "Support for parents"
         }
       ]
@@ -78,6 +78,14 @@
 
     <h2>NHS services</h2>
     <p class="nhsuk-lede-text">Lead text</p>
+    {% from 'card/macro.njk' import card %}
+    {{ card({
+        "type": "urgent",
+        "heading": "Find a local NHS urgent mental health helpline",
+        "descriptionHtml": "
+        <p>If you or a loved one are struggling and facing a mental health crisis, you can call your local NHS urgent mental health helpline any time of day or night.</p>
+        "
+      }) }}
     <div>
       <h3>Heading for steps</h3>
       <p>Paragraph for steps navigation?</p>
@@ -201,22 +209,31 @@
         "HTML": "<p>Waiting text <a href=\"https://yellowcard.mhra.gov.uk/\" title=\"External website\">Waiting link</a>.</p>"
       }) }}
 
-    </div>
-    {% from 'card/macro.njk' import card %}
-    {{ card({
-        "type": "urgent",
-        "heading": "Find a local NHS urgent mental health helpline",
-        "descriptionHtml": "
-        <p>If you or a loved one are struggling and facing a mental health crisis, you can call your local NHS urgent mental health helpline any time of day or night.</p>
+      {% from 'details/macro.njk' import details %}
+      {{ details({
+        "text": "I'm waiting you know...",
+        "HTML": "
+        <p>Paragraph</p>
+          <p>Paragraph</p>
+          <ul>
+              <li>list</li>
+              <li>list</li>
+              <li>list</li>
+              <li>list</li>
+          </ul>
+          <p>paragraph</p>
         "
       }) }}
+
+    </div>
+
 
       {% from 'pagination/macro.njk' import pagination %}
 
       {{ pagination({
         "previousUrl": "/overview",
         "previousPage": "Overview",
-        "nextUrl": "#",
+        "nextUrl": "/non-nhs-services",
         "nextPage": "Non-NHS Services"
       }) }}
 

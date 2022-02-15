@@ -56,7 +56,14 @@
     <h1>Referrals</h1>
     <p class="nhsuk-lede-text">
       Lead text - At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-
+      {% from 'card/macro.njk' import card %}
+      {{ card({
+          "type": "urgent",
+          "heading": "Find a local NHS urgent mental health helpline",
+          "descriptionHtml": "
+          <p>If you or a loved one are struggling and facing a mental health crisis, you can call your local NHS urgent mental health helpline any time of day or night.</p>
+          "
+        }) }}
 
     <h2>Subheading</h2>
     <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
@@ -119,17 +126,12 @@
 
 <p> Is the following an expander or inline text or a card? Feels like it should be something different</p>
                     <!-- can't task -->
-                    {% from 'details/macro.njk' import details %}
-                      {{ details({
-                        "classes": "nhsuk-expander",
-                        "text": "Can't do a thing 4",
-                        "HTML": "
-                        <p>You can see your GP records by:</p>
-                        <ul>
-                          <li>asking for them at your GP surgery </li>
-                          <li>going online to see them (if you have signed up for <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
-                        </ul>"
-                      }) }}
+                    {% from 'inset-text/macro.njk' import insetText %}
+
+                    {{ insetText({
+                      "HTML": "<p>Can't do a thing <a href=\"https://yellowcard.mhra.gov.uk/\" title=\"External website\">link</a>.</p>"
+                    }) }}
+
 
 
 
@@ -138,14 +140,7 @@
 
       </div>
 
-      {% from 'card/macro.njk' import card %}
-      {{ card({
-          "type": "urgent",
-          "heading": "Find a local NHS urgent mental health helpline",
-          "descriptionHtml": "
-          <p>If you or a loved one are struggling and facing a mental health crisis, you can call your local NHS urgent mental health helpline any time of day or night.</p>
-          "
-        }) }}
+
 
 
 
