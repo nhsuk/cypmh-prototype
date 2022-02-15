@@ -68,20 +68,20 @@
     },
     {
       href: "/non-nhs-services",
-      text: "Non-NHS services",
-      current: "true"
+      text: "Non-NHS services"
     }
     ,
     {
       href: "/support-for-parents",
-      text: "Support for parents"
+      text: "Support for parents",
+      current: "true"
     }
 
   ]
 }) }}
 
 
-    <h2>Non-NHS services</h2>
+    <h2>Support for parents</h2>
     <p class="nhsuk-lede-text">
       Lead text</p>
       <p class="nhsuk-lede-text">Lead text</p>
@@ -101,10 +101,10 @@
         {% from 'pagination/macro.njk' import pagination %}
 
         {{ pagination({
-          "previousUrl": "/nhs-services",
-          "previousPage": "NHS Services",
-          "nextUrl": "/",
-          "nextPage": "Support for parents"
+          "previousUrl": "/non-nhs-services",
+          "previousPage": "Non NHS Services",
+          "nextUrl": "",
+          "nextPage": ""
         }) }}
 
 
