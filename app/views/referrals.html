@@ -124,13 +124,15 @@
                       </ul>"
                     }) }}
 
-<p> Is the following an expander or inline text or a card? Feels like it should be something different</p>
+                    <p> Is the following an expander or inline text or a card? Feels like it should be something different</p>
                     <!-- can't task -->
-                    {% from 'inset-text/macro.njk' import insetText %}
 
                     {{ insetText({
-                      "HTML": "<p>Can't do a thing <a href=\"https://yellowcard.mhra.gov.uk/\" title=\"External website\">link</a>.</p>"
+                      "HTML": "<p>Can't do a thing <a href=\"https://yellowcard.mhra.gov.uk/\" title=\"External website\">Waiting link</a>.</p>"
                     }) }}
+                    {% from 'inset-text/macro.njk' import insetText %}
+
+                  
 
 
 
