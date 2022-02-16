@@ -63,17 +63,17 @@
     <p><b>For some services you may also be able to refer yourself - or your child if you are parent or carer.</b></p>
     <p><b>Here are some steps you can take to try and get the right support for you</b></p>
 
-      {% from 'card/macro.njk' import card %}
-      {{ card({
-          "type": "urgent",
-          "heading": "What's happening with these cards on these pages?",
-          "descriptionHtml": "
-          <p>If you or a loved one are struggling and facing a mental health crisis, you can call your local NHS urgent mental health helpline any time of day or night.</p>
-          "
-        }) }}
+    {% from 'card/macro.njk' import card %}
+    {{ card({
+        "type": "urgent",
+        "heading": "Get urgent help for mental health",
+        "descriptionHtml": "
+        <p>There are local urgent mental health helplines available to support you or a loved one if you need urgent support for your mental health</p>
+        "
+      }) }}
         <div>
           <section>
-
+            <h2>Feels like we need a heading here</h2>
 
             <!-- 1st task -->
             {% from 'details/macro.njk' import details %}
@@ -142,6 +142,7 @@
 
                 </section>
                 <section>
+                  <p></p>
                     <!-- can't task -->
                     <h2>What to do if you’re having difficulty accessing professional support</h2>
 
