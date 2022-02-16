@@ -53,99 +53,113 @@
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1>Referrals</h1>
-    <p class="nhsuk-lede-text">
-      Lead text - At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+    <h1>
+      Getting a referral to children and young people’s mental health services
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Mental health services for children and young people</span>
+    </h1>
+
+    <p><b>The first step to getting professional support is usually getting a referral from a professional such as a GP, teacher or social worker.</b></p>
+    <p><b>A referral is when someone puts you in contact with a specialist service that can offer you help, support and treatment.</b></p>
+    <p><b>For some services you may also be able to refer yourself - or your child if you are parent or carer.</b></p>
+    <p><b>Here are some steps you can take to try and get the right support for you</b></p>
+
       {% from 'card/macro.njk' import card %}
       {{ card({
           "type": "urgent",
-          "heading": "Find a local NHS urgent mental health helpline",
+          "heading": "What's happening with these cards on these pages?",
           "descriptionHtml": "
           <p>If you or a loved one are struggling and facing a mental health crisis, you can call your local NHS urgent mental health helpline any time of day or night.</p>
           "
         }) }}
+        <div>
+          <section>
 
-    <h2>Subheading</h2>
-    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
-
-
-
-          <div>
 
             <!-- 1st task -->
             {% from 'details/macro.njk' import details %}
               {{ details({
                 "classes": "nhsuk-expander",
-                "text": "Do a thing 1",
+                "text": "Speak to your GP",
                 "HTML": "
-                <p>You can see your GP records by:</p>
-                <ul>
-                  <li>asking for them at your GP surgery </li>
-                  <li>going online to see them (if you have signed up for <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
-                </ul>"
+                <p>Your GP can talk to you about what options are available to you locally and refer you to your local children and adolescent mental health services (CAMHS). </p>
+                <p>Before speaking to your GP, it can be a good idea to think about what to say and write this down to take with you.</p>
+                <p>Make sure tell your GP as much information as you can about how you’ve been feeling, and for how long. Be honest. This can be difficult, but it’s really important. This will help your GP get a better idea of the support you need.</p>
+                <p>Speaking to your GP about your mental health can seem daunting but they are there to help and listen. <a href=\"https://www.youngminds.org.uk/young-person/your-guide-to-support/how-to-speak-to-your-gp/\" title=\"Young Minds website\">Young Minds have more information about how to speak to your GP about your mental health.</a></p>
+                <p>If you are under 16, you may need your parent or carer’s consent to be referred.</p>
+
+                <div class=\"nhsuk-action-link\">
+                <a class=\"nhsuk-action-link__link\" href=\"https://www.nhs.uk/service-search/find-a-gp\">
+                  <svg class=\"nhsuk-icon nhsuk-icon__arrow-right-circle\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" width=\"36\" height=\"36\">
+                    <path d=\"M0 0h24v24H0z\" fill=\"none\"></path>
+                    <path d=\"M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z\"></path>
+                  </svg>
+                  <span class=\"nhsuk-action-link__text\">Find your local GP</span>
+                </a>
+              </div>
+                "
               }) }}
+
 
               <!-- 2nd task -->
               {% from 'details/macro.njk' import details %}
                 {{ details({
                   "classes": "nhsuk-expander",
-                  "text": "Do a thing 2",
+                  "text": "Find out who else can refer you – or if you can refer yourself",
                   "HTML": "
-                  <p>You can see your GP records by:</p>
-                  <ul>
-                    <li>asking for them at your GP surgery </li>
-                    <li>going online to see them (if you have signed up for <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
-                  </ul>"
+                  <p>Other professional like teachers, school workers and social workers can also refer you to children and young people’s mental health services. </p>
+                  <p>You may also be able to refer yourself or your child.</p>
+                  <p>To find out if you can refer yourself to a service you’ll need to contact your local children and adolescent mental health services (CAMHS). They will have a website, which you can find by searching online for ‘CAMHS’ and the county or town you live in, for example ‘CAMHS Kent’.</p>
+                  "
                 }) }}
+
 
                 <!-- 3rd task -->
                 {% from 'details/macro.njk' import details %}
                   {{ details({
                     "classes": "nhsuk-expander",
-                    "text": "Do a thing 3",
+                    "text": "Ask when you’re likely to hear from the service",
                     "HTML": "
-                    <p>You can see your GP records by:</p>
-                    <ul>
-                      <li>asking for them at your GP surgery </li>
-                      <li>going online to see them (if you have signed up for <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
-                    </ul>"
+                    <p>You should be told this but, if not, it can be helpful to ask so that you know what to expect.</p>
+                    <p>There is likely to be a waiting list, and this may differ depending on the area that you live in. There is usually a short wait to be contacted for an initial assessment but there may be a longer wait before you start receiving support.</p>
+                    <p>This can be frustrating, especially if you feel you need support sooner but there are things you can do to help yourself in the meantime.</p>
+                    <p>Read more below about looking after yourself while you’re waiting for support.</p>
+                    "
+                  }) }}
+                  <!-- 4th task -->
+                {% from 'details/macro.njk' import details %}
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "Look after yourself while you’re waiting for support",
+                    "HTML": "
+                    <p>If there is going to be a long wait for support make sure that you’ve got people around you that you can talk to who are aware that you are experiencing difficulties.</p>
+                    <p>Self-care options can be helpful to help you try to manage your difficulties whilst you wait to be seen.</p>
+                    <p>The charity the <a href=\"https://www.annafreud.org/on-my-mind/self-care/\">Anna Freud Centre lots of ideas for self-care to help you try and feel better</a>.</p>
+                    <p>There are also lots of charities that provide direct support such as counselling and helplines. Read more about charity and other mental health support for children and young people.</p>
+                    <p>If your situation changes or deteriorates, then you should go back to the service to let them know what has changed as this may change the amount of time you have to wait to be seen.</p>
+                    <p>You can also <a href=\"#\">get urgent help if you need it</a>.</p>
+                    "
                   }) }}
 
-                  <!-- 4th task -->
-                  {% from 'details/macro.njk' import details %}
-                    {{ details({
-                      "classes": "nhsuk-expander",
-                      "text": "Do a thing 4",
-                      "HTML": "
-                      <p>You can see your GP records by:</p>
-                      <ul>
-                        <li>asking for them at your GP surgery </li>
-                        <li>going online to see them (if you have signed up for <a href=\"/using-the-nhs/nhs-services/gps/gp-online-services/\">GP online services</a>) </li>
-                      </ul>"
-                    }) }}
-
-                    <p> Is the following an expander or inline text or a card? Feels like it should be something different</p>
+                </section>
+                <section>
                     <!-- can't task -->
+                    <h2>What to do if you’re having difficulty accessing professional support</h2>
+
 
                     {{ insetText({
-                      "HTML": "<p>Can't do a thing <a href=\"https://yellowcard.mhra.gov.uk/\" title=\"External website\">Waiting link</a>.</p>"
+                      "HTML": "
+                      <p>If you can’t get a referral from your GP, you could try asking another GP or finding out who else can refer you (see above). It may be useful to know the <a href=\"#\" title=\"\">criteria that GPs use to refer children and young people to specialist services</a>.</p>
+                      <p>If you’ve been referred but have not been offered support after an initial assessment, this can feel disappointing and frustrating.</p>
+                      <p>Just because this particular service wasn’t able to help doesn’t mean there isn’t another one that can.</p>
+                      <p>Go back to your referrer and discuss other options with them. It will help if you have a record of why the service have said they can’t help, even if it’s just a few notes.</p>
+                      <p>You can also do your own research for other services – Anna Freud’s <a href=\"https://www.annafreud.org/on-my-mind/youth-wellbeing/\">Youth Wellbeing Directory</a> might be a good starting point.</p>
+                      <p>If you’ve tried all ways of being referred to mental health services without success <a href=\"https://www.mind.org.uk/information-support/guides-to-support-and-services/advocacy/what-is-advocacy/\">Mind</a> or <a href=\"https://www.nhs.uk/nhs-services/hospitals/what-is-pals-patient-advice-and-liaison-service/\">PALS</a> may be able to advocate for you and help you get the support you need.</p>
+                      "
                     }) }}
                     {% from 'inset-text/macro.njk' import insetText %}
 
-                  
-
-
-
-
-
-
-
-      </div>
-
-
-
-
-
+                </section>
+              </div>
 
       <!-- End of content -->
 

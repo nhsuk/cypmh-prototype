@@ -53,48 +53,52 @@
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1>Mental health services for children and young people</h1>
+    <h1>
+      Charity and other mental health services
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Mental health services for children and young people</span>
+    </h1>
+
 {% from 'contents-list/macro.njk' import contentsList %}
 
 {{ contentsList({
   items: [
     {
-      href: "#",
+      href: "/overview",
       text: "Overview"
     },
     {
       href: "/nhs-services",
-      text: "NHS services"
+      text: "NHS mental health services for children and young people"
     },
     {
       href: "/non-nhs-services",
-      text: "Non-NHS services",
+      text: "Charity and other mental health services",
       current: "true"
     }
     ,
     {
       href: "/support-for-parents",
-      text: "Support for parents"
+      text: "Information and support for parents and carers"
     }
 
   ]
 }) }}
 
+  <p><b>lead text</b></p>
 
-    <h2>Non-NHS services</h2>
-    <p class="nhsuk-lede-text">
-      Lead text</p>
-      <p class="nhsuk-lede-text">Lead text</p>
 
       {% from 'card/macro.njk' import card %}
       {{ card({
           "type": "urgent",
-          "heading": "Find a local NHS urgent mental health helpline",
+          "heading": "What's happening with these cards on these pages?",
           "descriptionHtml": "
           <p>If you or a loved one are struggling and facing a mental health crisis, you can call your local NHS urgent mental health helpline any time of day or night.</p>
           "
         }) }}
-      <P> Paragraph</P>
+
+
+      
+
 
 
 
@@ -102,9 +106,9 @@
 
         {{ pagination({
           "previousUrl": "/nhs-services",
-          "previousPage": "NHS Services",
-          "nextUrl": "/",
-          "nextPage": "Support for parents"
+          "previousPage": "NHS mental health services for children and young people",
+          "nextUrl": "/support-for-parents",
+          "nextPage": "Information and support for parents and carers"
         }) }}
 
 
