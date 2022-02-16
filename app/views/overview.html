@@ -53,7 +53,11 @@
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1>Mental health services for children and young people</h1>
+    <h1>
+      Overview
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Mental health services for children and young people</span>
+    </h1>
+
 {% from 'contents-list/macro.njk' import contentsList %}
 
 {{ contentsList({
@@ -65,36 +69,50 @@
     },
     {
       href: "/nhs-services",
-      text: "NHS services"
+      text: "NHS mental health services for children and young people"
     },
     {
       href: "/non-nhs-services",
-      text: "Non-NHS services"
+      text: "Charity and other mental health services"
     }
     ,
     {
       href: "/support-for-parents",
-      text: "Support for parents"
+      text: "Information and support for parents and carers"
     }
 
   ]
 }) }}
 
 
-    <h2>Overview</h2>
-    <p class="nhsuk-lede-text">
-      If you are under 18 you can get support for mental health conditions from children and young people’s mental health services (CYPMHS). You may also see this called children and adolescent mental health services (CAMHS).</p>
-      <p class="nhsuk-lede-text">Find out below how you can access this support.</p>
 
-      {% from 'card/macro.njk' import card %}
-      {{ card({
-          "type": "urgent",
-          "heading": "Find a local NHS urgent mental health helpline",
-          "descriptionHtml": "
-          <p>If you or a loved one are struggling and facing a mental health crisis, you can call your local NHS urgent mental health helpline any time of day or night.</p>
-          "
-        }) }}
-      <P> what else needs to go on this page?????</P>
+<p><b>If you are a child or young person and think you might need help or treatment for how you are feeling (your mental health) the NHS provides services that can help. There are also lots of charities and organisation you can go to for support.</b></p>
+<p><b>If you are a parent or carer of a child or young person who needs support, you can read more here about what help is available to them and how to help them access it.</b></p>
+
+
+<h2>Get urgent help for mental health</h2>
+
+<p>There are local urgent mental health helplines available to support you or a loved one if you need urgent support for your mental health</p>
+
+<h3>Children and young people’s mental health services (CYPMHS)</h3>
+<p>Children and young people’s mental health services (CYPMHS) are NHS services available to people under 18 who need professional support to help manage how they are feeling. You may also hear them called children and adolescent mental health services (CAMHS). They usually offer a range of services including talking therapies, family therapy and medication.</p>
+
+<h3>Charity and other mental health support for children and young people</h3>
+<p>Mental health charities and support organisations provide a wide range of services – from helplines and counselling to advocacy, information and self-help resources.</p>
+
+<h3>Information and support for parents and carers</h3>
+<p>Find about more about what you can do to support a child or young person to get the help they need. And how you can support yourself.</p>
+<!--{% from 'card/macro.njk' import card %}
+{{ card({
+    "type": "urgent",
+    "heading": "Get urgent help for mental health",
+    "descriptionHtml": "
+    <p>There are local urgent mental health helplines available to support you or a loved one if you need urgent support for your mental health.</p>
+    "
+  }) }}-->
+
+
+
 
 
 
@@ -104,7 +122,7 @@
           "previousUrl": "#",
           "previousPage": "",
           "nextUrl": "/nhs-services",
-          "nextPage": "NHS Services"
+          "nextPage": "NHS mental health services for children and young people"
         }) }}
 
 
