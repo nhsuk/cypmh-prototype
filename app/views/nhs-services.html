@@ -76,10 +76,7 @@
     }) }}
 
     <p><b>If you’re struggling with how you are feeling (your mental health) and feel like you need support, you’re not alone.</b></p>
-    <p><b>The NHS provides specialist mental health services for children and young people who need professional support to manage their mental health. </b></p>
-    <p><b>You may hear these called children and young people’s mental health services (CYMPHS) or children and adolescent mental health services (CAMHS).</b></p>
-    <p><b>If you’re a parent or carer of a child or young person who is experiencing mental health difficulties, you can help and support them to access these services.</b></p>
-
+    <p><b>The NHS provides mental health services for children and young people who need professional support to manage their mental health. </b></p>
     {% from 'card/macro.njk' import card %}
     {{ card({
         "type": "urgent",
@@ -88,10 +85,13 @@
         <p>There are local urgent mental health helplines available to support you or a loved one if you need urgent support for your mental health</p>
         "
       }) }}
-    <div>
-      <h2>How do children and young people’s mental health services work?</h2>
-      <p>Services might be slightly different depending on where you live, but they usually involve the following steps:</p>
-      <div id="step-by-step-navigation" class="app-step-nav app-step-nav--large app-step-nav--active" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all" data-hide-all-text="Hide all">
+  <div>
+
+    <h2>How do children and young people’s mental health services work?</h2>
+    <p>Children and young people’s mental health services (CYMPHS) cover a wide range of mental health issues and offer treatment such as talking therapies, family therapy and medicines.</p>
+    <p>You may also hear these services called children and adolescent mental health services (CAMHS).</p>
+    <p>Services might be different depending on where you live. But the steps to getting help are usually the same for everyone. These are:</p>
+    <div id="step-by-step-navigation" class="app-step-nav app-step-nav--large app-step-nav--active" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all" data-hide-all-text="Hide all">
         <ol class="app-step-nav__steps">
     <!-- step 1 -->
           <li class="app-step-nav__step js-step" id="referral" >
@@ -105,14 +105,13 @@
                   </span>
                 </span>
                 <span class="js-step-title">
-                  Referral
+                  Getting referred
                 </span>
               </h2>
             </div>
             <div class="app-step-nav__panel js-panel js-hidden" id="referral-1">
               <div class="app-step-nav__paragraph">
-                <!--<h3>Subheading</h3>-->
-                <p class="app-step-nav__paragraph">To access NHS specialist mental health services, you will usually need a referral from a professional such as a GP, teacher, social worker or youth worker. In some case you may also be able to refer yourself (or your child if you are a parent or carer).<p>
+                <p class="app-step-nav__paragraph">To use NHS specialist mental health services, you will usually need a referral from a GP, teacher, social worker or youth worker. In some case you may also be able to refer yourself (or your parent or carer can refer you). <p>
                 <p class="app-step-nav__paragraph"><a href="/referrals">Find out more about how you can get a referral</a></p>
               </div>
             </div>
@@ -129,39 +128,18 @@
                   </span>
                 </span>
                 <span class="js-step-title">
-                  Triage and assessment
+                  Getting assessed
                 </span>
               </h2>
             </div>
             <div class="app-step-nav__panel js-panel js-hidden" id="triage-2">
-              <!--<h3>Subheading</h3>-->
-              <p class="app-step-nav__paragraph">Once you have been referred, the service will look at your referral information and decide what support you might need (triage). They may get in touch with you, or the person who referred you, to find out more information to help them make that decision. </p>
-              <p class="app-step-nav__paragraph">You may then be offered an appointment to have an assessment with a specialist. Or you may be given information about self-management resources that could help you. </p>
-              <p class="app-step-nav__paragraph"><a href="#">Find out more about triage and assessment</a></p>
+              <p class="app-step-nav__paragraph">After you’ve been referred, the mental health service will look at your personal information and decide what support you might need (this is called triage). They may get in touch with you, or the person who referred you, to find out more information to help them make that decision.</p>
+              <p class="app-step-nav__paragraph">You may then be offered an appointment to have an assessment with a specialist. Or you may be given information and resources so you can do things on your own to help yourself, called self-management.</p>
+              <p class="app-step-nav__paragraph"><a href="javascript: void(0)">Find out more about triage and assessment</a></p>
             </div>
           </li>
-    <!-- step 3-->
-        <!--  <li class="app-step-nav__step js-step" id="appointments" >
-            <div class="app-step-nav__header js-toggle-panel" data-position="3">
-              <h2 class="app-step-nav__title">
-                <span class="app-step-nav__circle app-step-nav__circle--number">
-                  <span class="app-step-nav__circle-inner">
-                    <span class="app-step-nav__circle-background">
-                      <span class="nhsuk-u-visually-hidden">Step</span> 3
-                    </span>
-                  </span>
-                </span>
-                <span class="js-step-title">
-                  Appointments
-                </span>
-              </h2>
-            </div>
-            <div class="app-step-nav__panel js-panel js-hidden" id="appointments-2">
-              <h3>Subheading</h3>
-              <p class="app-step-nav__paragraph">Paragraph</p>
-            </div>
-          </li>-->
-    <!-- step 4 -->
+
+    <!-- step 3 -->
           <li class="app-step-nav__step js-step" id="treatment" >
             <div class="app-step-nav__header js-toggle-panel" data-position="3">
               <h2 class="app-step-nav__title">
@@ -178,12 +156,12 @@
               </h2>
             </div>
             <div class="app-step-nav__panel js-panel js-hidden" id="treatment-2">
-              <!--<h3>Subheading</h3>-->
-              <p class="app-step-nav__paragraph">Your treatment will depend on what mental health condition you have and how it is affecting your daily life but might include talking therapies such as counselling and cognitive behavioural therapy (CBT), online self-management support and medication if you want it.</p>
-              <p class="app-step-nav__paragraph"><a href="#">Find out more about treatment for mental health conditions</a></p>
+              <p class="app-step-nav__paragraph">Your treatment will depend on what mental health issues you have and how it is affecting your daily life. It might include talking therapies such as counselling and cognitive behavioural therapy (CBT), online self-management support and medicines if you want them.</p>
+              <p class="app-step-nav__paragraph"><a href="javascript: void(0)">Find out more about treatment for mental health conditions</a></p>
             </div>
           </li>
-    <!-- step 5 -->
+
+    <!-- step 4 -->
           <li class="app-step-nav__step js-step" id="transfer" >
             <div class="app-step-nav__header js-toggle-panel" data-position="4">
               <h2 class="app-step-nav__title">
@@ -200,9 +178,8 @@
               </h2>
             </div>
             <div class="app-step-nav__panel js-panel js-hidden" id="transfer-2">
-              <!--<h3>Subheading</h3>-->
-              <p class="app-step-nav__paragraph">When you are turn 18 and if you still need mental health support you will move on to adult mental health services. During this is a period of transition you may need extra support and information.</p>
-              <p class="app-step-nav__paragraph"><a href="#">Find out more about moving on to adult mental health services</a></p>
+              <p class="app-step-nav__paragraph">If you turn 18 and still need mental health support, you will move on to adult mental health services. This is a time where you may need extra support and information.</p>
+              <p class="app-step-nav__paragraph"><a href="javascript: void(0)">Find out more about moving on to adult mental health services</a></p>
             </div>
           </li>
         </ol>
@@ -210,18 +187,15 @@
     </div>
     <div>
 
-      <h3>Getting support while you’re waiting for treatment</h3>
-      {% from 'inset-text/macro.njk' import insetText %}
+      <h2>Getting support while you’re waiting for treatment</h2>
 
-      {{ insetText({
-        "HTML": "
-        <p>If you are referred for professional help, there may be a waiting time before you are seen by, or hear from, the service. </p>
+        <p>If you are referred for NHS help, there may be a waiting time before you are seen by, or hear from, the service.</p>
         <p>This can be frustrating if you are struggling with how you are feeling, or if you are a parent or carer and want your child or young person to get help sooner.</p>
-        <p>But there are lots of things you can do while you’re waiting, including doing things to help yourself (self-management) and contacting charity services for support.</p>
-        "
-      }) }}
+        <p>But there are lots of things you can do while you’re waiting, including doing things to help yourself (self-help) and contacting charity services for support</p>
+        <p><a href="javascript: void(0)">Find you what to do to manage your mental health while you are waiting</a></p>
 
-      {% from 'details/macro.njk' import details %}
+
+      <!--{% from 'details/macro.njk' import details %}
       {{ details({
         "text": "What was supposed to go in this Details component?",
         "HTML": "
@@ -235,7 +209,7 @@
           </ul>
           <p>paragraph</p>
         "
-      }) }}
+      }) }}-->
 
     </div>
 
