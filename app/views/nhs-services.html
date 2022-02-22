@@ -68,7 +68,7 @@
         }
         ,
         {
-          href: "javascript: void(0)",
+          href: "/support-for-parents",
           text: "Information for parents and carers"
         }
 
@@ -77,14 +77,7 @@
 
     <p><b>If you’re struggling with how you are feeling (your mental health) and feel like you need support, you’re not alone.</b></p>
     <p><b>The NHS provides mental health services for children and young people who need professional support to manage their mental health. </b></p>
-    {% from 'card/macro.njk' import card %}
-    {{ card({
-        "type": "urgent",
-        "heading": "Get urgent help for mental health",
-        "descriptionHtml": "
-        <p>There are local urgent mental health helplines available to support you or a loved one if you need urgent support for your mental health</p>
-        "
-      }) }}
+    {% include "includes/urgent-care-card.html" %}
   <div>
 
     <h2>How do children and young people’s mental health services work?</h2>
@@ -111,7 +104,7 @@
             </div>
             <div class="app-step-nav__panel js-panel js-hidden" id="referral-1">
               <div class="app-step-nav__paragraph">
-                <p class="app-step-nav__paragraph">To use NHS specialist mental health services, you will usually need a referral from a GP, teacher, social worker or youth worker. In some case you may also be able to refer yourself (or your parent or carer can refer you). <p>
+                <p class="app-step-nav__paragraph">To use NHS specialist mental health services, you will usually need a referral from a GP, teacher, social worker or youth worker. In some cases you may also be able to refer yourself (or your parent or carer can refer you). <p>
                 <p class="app-step-nav__paragraph"><a href="/referrals">Find out more about how you can get a referral</a></p>
               </div>
             </div>
@@ -194,22 +187,6 @@
         <p>But there are lots of things you can do while you’re waiting, including doing things to help yourself (self-help) and contacting charity services for support</p>
         <p><a href="javascript: void(0)">Find you what to do to manage your mental health while you are waiting</a></p>
 
-
-      <!--{% from 'details/macro.njk' import details %}
-      {{ details({
-        "text": "What was supposed to go in this Details component?",
-        "HTML": "
-        <p>Paragraph</p>
-          <p>Paragraph</p>
-          <ul>
-              <li>list</li>
-              <li>list</li>
-              <li>list</li>
-              <li>list</li>
-          </ul>
-          <p>paragraph</p>
-        "
-      }) }}-->
 
     </div>
 

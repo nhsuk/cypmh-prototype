@@ -61,14 +61,7 @@
     <p><b>The referral will give your details to a specialist service that can offer you help, support and treatment.</b></p>
     <p><b>For some services you may also be able to refer yourself - or your parent or carer can refer you.</b></p>
 
-    {% from 'card/macro.njk' import card %}
-    {{ card({
-        "type": "urgent",
-        "heading": "Get urgent help for mental health",
-        "descriptionHtml": "
-        <p>There are local urgent mental health helplines available to support you or a loved one if you need urgent support for your mental health</p>
-        "
-      }) }}
+    {% include "includes/urgent-care-card.html" %}
         <div>
 
           <section>

@@ -77,7 +77,7 @@
     }
     ,
     {
-      href: "javascript: void(0)",
+      href: "/support-for-parents",
       text: "Information for parents and carers"
     }
 
@@ -87,14 +87,7 @@
   <p><b>As well as NHS services there are lots of other organisations for children and young people that provide information and services to help you manage your thoughts and feelings (your mental health).</b></p>
 
 
-  {% from 'card/macro.njk' import card %}
-  {{ card({
-      "type": "urgent",
-      "heading": "Get urgent help for mental health",
-      "descriptionHtml": "
-      <p>There are local urgent mental health helplines available to support you or a loved one if you need urgent support for your mental health</p>
-      "
-    }) }}
+{% include "includes/urgent-care-card.html" %}
 
     <div>
       <section>
@@ -199,7 +192,7 @@
         {{ pagination({
           "previousUrl": "/nhs-services",
           "previousPage": "NHS services",
-          "nextUrl": "javascript: void(0)",
+          "nextUrl": "/support-for-parents",
           "nextPage": "Information for parents and carers"
         }) }}
 
