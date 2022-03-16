@@ -1,0 +1,220 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout_minihub.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+    {% from 'breadcrumb/macro.njk' import breadcrumb %}
+    {{ breadcrumb({
+    items: [
+      {
+        href: "https://www.nhs.uk",
+        text: "Home"
+      },
+      {
+        href: "https://www.nhs.uk/mental-health/",
+        text: "Mental health"
+      }
+    ],
+    href: "/overview",
+    text: "Mental health services and support for children and young people"
+    }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>
+      NHS services
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Mental health services and support for children and young people</span>
+    </h1>
+    {% from 'contents-list/macro.njk' import contentsList %}
+
+    {{ contentsList({
+      items: [
+        {
+          href: "/overview",
+          text: "Overview"
+        },
+        {
+          href: "/nhs-services",
+          text: "NHS services",
+          current: "true"
+        },
+        {
+          href: "/non-nhs-services",
+          text: "Charity and other services"
+        }
+        ,
+        {
+          href: "/support-for-parents",
+          text: "Information for parents and carers"
+        }
+
+      ]
+    }) }}
+
+    <p><b>If you’re struggling with how you are feeling (your mental health) and feel like you need support, you’re not alone.</b></p>
+    <p><b>The NHS provides mental health services for children and young people who need professional support to manage their mental health. </b></p>
+    {% include "includes/urgent-care-card.html" %}
+  <div>
+
+    <h2>How do children and young people’s mental health services work?</h2>
+    <p>Children and young people’s mental health services (CYMPHS) cover a wide range of mental health issues and offer treatment such as talking therapies, family therapy and medicines.</p>
+    <p>You may also hear these services called children and adolescent mental health services (CAMHS).</p>
+    <p>Services might be different depending on where you live. But the steps to getting help are usually the same for everyone. These are:</p>
+    <div id="step-by-step-navigation" class="app-step-nav app-step-nav--large app-step-nav--active" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all" data-hide-all-text="Hide all">
+        <ol class="app-step-nav__steps">
+    <!-- step 1 -->
+          <li class="app-step-nav__step js-step" id="referral" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="1">
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="nhsuk-u-visually-hidden">Step</span> 1
+                    </span>
+                  </span>
+                </span>
+                <span class="js-step-title">
+                  Getting referred
+                </span>
+              </h2>
+            </div>
+            <div class="app-step-nav__panel js-panel js-hidden" id="referral-1">
+              <div class="app-step-nav__paragraph">
+                <p class="app-step-nav__paragraph">To use NHS specialist mental health services, you will usually need a referral from a GP, teacher, social worker or youth worker. In some cases you may also be able to refer yourself (or your parent or carer can refer you). <p>
+                <p class="app-step-nav__paragraph"><a href="/referrals">Find out more about how you can get a referral</a></p>
+              </div>
+            </div>
+          </li>
+    <!-- step 2-->
+          <li class="app-step-nav__step js-step" id="triage" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="2">
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="nhsuk-u-visually-hidden">Step</span> 2
+                    </span>
+                  </span>
+                </span>
+                <span class="js-step-title">
+                  Getting assessed
+                </span>
+              </h2>
+            </div>
+            <div class="app-step-nav__panel js-panel js-hidden" id="triage-2">
+              <p class="app-step-nav__paragraph">After you’ve been referred, the mental health service will look at your personal information and decide what support you might need (this is called triage). They may get in touch with you, or the person who referred you, to find out more information to help them make that decision.</p>
+              <p class="app-step-nav__paragraph">You may then be offered an appointment to have an assessment with a specialist. Or you may be given information and resources so you can do things on your own to help yourself, called self-management.</p>
+              <p class="app-step-nav__paragraph"><a href="javascript: void(0)">Find out more about triage and assessment</a></p>
+            </div>
+          </li>
+
+    <!-- step 3 -->
+          <li class="app-step-nav__step js-step" id="treatment" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="3">
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="nhsuk-u-visually-hidden">Step</span> 3
+                    </span>
+                  </span>
+                </span>
+                <span class="js-step-title">
+                  Treatment
+                </span>
+              </h2>
+            </div>
+            <div class="app-step-nav__panel js-panel js-hidden" id="treatment-2">
+              <p class="app-step-nav__paragraph">Your treatment will depend on what mental health issues you have and how it is affecting your daily life. It might include talking therapies such as counselling and cognitive behavioural therapy (CBT), online self-management support and medicines if you want them.</p>
+              <p class="app-step-nav__paragraph"><a href="javascript: void(0)">Find out more about treatment for mental health conditions</a></p>
+            </div>
+          </li>
+
+    <!-- step 4 -->
+          <li class="app-step-nav__step js-step" id="transfer" >
+            <div class="app-step-nav__header js-toggle-panel" data-position="4">
+              <h2 class="app-step-nav__title">
+                <span class="app-step-nav__circle app-step-nav__circle--number">
+                  <span class="app-step-nav__circle-inner">
+                    <span class="app-step-nav__circle-background">
+                      <span class="nhsuk-u-visually-hidden">Step</span> 4
+                    </span>
+                  </span>
+                </span>
+                <span class="js-step-title">
+                  Moving on to adult mental health services
+                </span>
+              </h2>
+            </div>
+            <div class="app-step-nav__panel js-panel js-hidden" id="transfer-2">
+              <p class="app-step-nav__paragraph">If you turn 18 and still need mental health support, you will move on to adult mental health services. This is a time where you may need extra support and information.</p>
+              <p class="app-step-nav__paragraph"><a href="javascript: void(0)">Find out more about moving on to adult mental health services</a></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div>
+
+      <h2>Getting support while you’re waiting for treatment</h2>
+
+        <p>If you are referred for NHS help, there may be a waiting time before you are seen by, or hear from, the service.</p>
+        <p>This can be frustrating if you are struggling with how you are feeling, or if you are a parent or carer and want your child or young person to get help sooner.</p>
+        <p>But there are lots of things you can do while you’re waiting, including doing things to help yourself (self-help) and contacting charity services for support</p>
+        <p><a href="javascript: void(0)">Find out what to do to manage your mental health while you are waiting</a></p>
+
+
+    </div>
+
+
+      {% from 'pagination/macro.njk' import pagination %}
+
+      {{ pagination({
+        "previousUrl": "/overview",
+        "previousPage": "Overview",
+        "nextUrl": "/non-nhs-services",
+        "nextPage": "Charity and other services"
+      }) }}
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

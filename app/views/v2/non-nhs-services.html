@@ -1,0 +1,204 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout_minihub.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+    {% from 'breadcrumb/macro.njk' import breadcrumb %}
+    {{ breadcrumb({
+    items: [
+      {
+        href: "https://www.nhs.uk",
+        text: "Home"
+      },
+      {
+        href: "https://www.nhs.uk/mental-health/",
+        text: "Mental health"
+      }
+    ],
+    href: "/overview",
+    text: "Mental health services and support for children and young people"
+
+    }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>
+      Charity and other services
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Mental health services and support for children and young people</span>
+    </h1>
+
+{% from 'contents-list/macro.njk' import contentsList %}
+
+{{ contentsList({
+  items: [
+    {
+      href: "/overview",
+      text: "Overview"
+    },
+    {
+      href: "/nhs-services",
+      text: "NHS services"
+    },
+    {
+      href: "/non-nhs-services",
+      text: "Charity and other services",
+      current: "true"
+    }
+    ,
+    {
+      href: "/support-for-parents",
+      text: "Information for parents and carers"
+    }
+
+  ]
+}) }}
+
+  <p><b>As well as NHS services there are lots of other organisations for children and young people that provide information and services to help you manage your thoughts and feelings (your mental health).</b></p>
+
+
+{% include "includes/urgent-care-card.html" %}
+
+    <div>
+      <section>
+        <h2>Talking to someone</h2>
+        <p>Although it can be scary or difficult to talk to someone about how you are feeling, it can help you work out what help you need and understand that you’re not alone.</p>
+
+        <h3>Counselling and online professional support</h3>
+        <p>These organisations provide support from counsellors and other people trained to support children and young people.</p>
+        <p><a href="https://www.childline.org.uk" title="Childline website">ChildLine</a> provides a confidential telephone and online counselling service for anyone under 19 with a problem. You can:</p>
+        <ul>
+          <li>call 0800 1111 any time for free</li>
+          <li>have an <a href="https://www.childline.org.uk/get-support/1-2-1-counsellor-chat/" title="Childline - Chat with a counsellor online page">online chat with a counsellor</a></li>
+        </ul>
+        <p><a href="https://www.themix.org.uk"  title="The Mix website">The Mix</a> provides a free confidential telephone helpline and online service for anyone under 25 that aims to find young people the best help, whatever the problem. You can:</p>
+        <ul>
+          <li>call 0808 808 4994 for free – lines are open from 11am to 11pm every day</li>
+          <li><a href="https://www.themix.org.uk/get-support/speak-to-our-team/email-us" title="Email The Mix on their website">email question to The Mix</a></li>
+          <li><a href="https://www.themix.org.uk/get-support/speak-to-our-team/the-mix-counselling-service" title="The Mix councelling swervice web page">get counselling</a></li>
+        </ul>
+        <p><a href="https://www.kooth.com" title="The Kooth website">Kooth</a> is a free, safe and anonymous online mental wellbeing community where you can message or live chat with their support team.</p>
+
+        <h3>Connecting with others </h3>
+        <p>If you’re struggling with mental health issues, it can help to know you’re not alone and find out how other people manage similar thoughts and feelings.</p>
+        <p>These organisations provide safe ways for you to get in touch with other young people or read more about other people’s experiences.</p>
+        <ul>
+          <li>You can visit <a href="https://www.childline.org.uk/get-support/message-boards/" title="Childline's website message boards">Childline’s message boards</a> to ask questions and share experiences</li>
+          <li><a href="https://www.themix.org.uk/get-support" title="Get support on The Mix website">The Mix has online group chats and discussion boards</a></li>
+          <li><a href="https://www.kooth.com" title="The Kooth website">Kooth has active and supportive discussion boards</a></li>
+          <li>You can read other people’s stories on the <a href="https://www.youngminds.org.uk/young-person/blog/" title="Real Stories On Mental Health From Young People on the YoungMinds website">Young Minds website</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Get information and tools to help yourself</h2>
+        <p>It can help to find out more about how are you are feeling and things you can do yourself to help feel better. </p>
+        <ul>
+          <li><a href="https://www.nhs.uk/every-mind-matters/" title="NHS Every mind matters">Every Mind Matters</a> provides information and support, including tips on how to improve your mental wellbeing. <a href="https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/youth-mental-health/#videos" title="Self care videos on NHS Every mind matters">Including self-care tips videos for young people</a>.</li>
+          <li><a href="https://www.youngminds.org.uk/young-person/find-help" title="Find help on the YoungMinds website">YoungMinds</a> has a wealth of self-help resources on their website, as well as providing dedicated crisis services.</li>
+          <li><a href="https://www.annafreud.org/on-my-mind/" title="On My Mind | Resources for Young People | Anna Freud Centre">The Anna Freud Centre’s On My Mind</a> has a self-care hub for young people.</li>
+          <li><a href="https://bestforyou.orcha.co.uk" title="NHS Best for you website">Best for you</a> is on online resources for finding useful mental health apps</li>
+        </ul>
+        </section>
+        <section>
+          <h2>Find local services </h2>
+          <p>There are a several online tools that can help you find services near to where you live. These are:</p>
+          <ul>
+            <li><a href="https://hubofhope.co.uk" title="The Hub of Hope website">The Hub of Hope</a></li>
+            <li><a href="https://www.themix.org.uk/get-support/find-local-services" title="Find Local Services on the Mix website">Find local services on The Mix website</a></li>
+            <li><a href="https://www.annafreud.org/on-my-mind/youth-wellbeing/" title="Youth Wellbeing Directory on the Anna Freud website">The Anna Freud Centre’s Youth Wellbeing Directory</a></li>
+          </ul>
+      </section>
+      <section>
+        <h2>Further support for children and young people</h2>
+
+        <h3>Papyrus</h3>
+        <p><a href="https://www.papyrus-uk.org" title="Papyrus website">Papyrus (Prevention of Young Suicide)</a> provides advice and support for young people who feel like they want to take their own life, and all their advice is confidential. You can:</p>
+        <ul>
+          <li>call their helpline, HOPELineUK, on 0800 068 41 41</li>
+          <li>text them on 07786 209 687</li>
+        </ul>
+
+        <h3>Samaritans</h3>
+        <p><a href="https://www.samaritans.org" title="Samaritans website">Samaritans</a> are an organisation you can ring at any time of the day or night. They'll help you and listen to how you’re feeling. You can:</p>
+        <ul>
+          <li>call them on 116 123</li>
+          <li>email them at <a href="mailto:jo@samaritans.org" title="Email the Samaritans">jo@samaritans.org</a></li>
+        </ul>
+
+        <h3>SHOUT</h3>
+        <p><a href="https://giveusashout.org" title="The SHOUT website">SHOUT</a> provides free, confidential, 24/7 text message support in the UK for anyone who is struggling to cope and anyone in crisis. You can:</p>
+        <ul>
+          <li>text SHOUT to 85258</li>
+        </ul>
+        <p>This service is free on all major mobile networks.</p>
+
+        <h3>BEAT</h3>
+        <p>The charity <a href="https://www.beateatingdisorders.org.uk" title="The BEAT website">Beat</a> provide information to help young people who may be struggling with an eating problem, including an eating disorder.</p>
+        <p>They also provide advice, links to local support and one-to-one webchats.</p>
+        <p>You can call their dedicated helplines:</p>
+        <ul>
+          <li>Youthline on 0808 801 0711 (for anyone under 18)</li>
+          <li>Studentline on 0808 801 0811 (for students)</li>
+        </ul>
+        <p>You can also email them at:</p>
+        <ul>
+          <li><a href="mailto:fyp@beateatingdisorders.org.uk" title="Email Youthline">fyp@beateatingdisorders.org.uk</a> (for anyone under 18)</li>
+          <li><a href="mailto:studentline@beateatingdisorders.org.uk" title="Email Studentline">studentline@beateatingdisorders.org.uk</a> (for students)</li>
+        </ul>
+        <p>Beat are open 365 days a year. You can contact them on weekdays from 9am to 8pm and weekends from 4pm to 8pm.</p>
+
+
+        <h3>RCPSYCH</h3>
+        <p>The Royal College of Psychiatrists also has <a href="https://www.rcpsych.ac.uk/mental-health/parents-and-young-people" title="The Royal College of Psychiatrists information for young people">information for young people, parents and carers about young people's mental health</a>.</p>
+
+
+      </section>
+    </div>
+
+
+        {% from 'pagination/macro.njk' import pagination %}
+
+        {{ pagination({
+          "previousUrl": "/nhs-services",
+          "previousPage": "NHS services",
+          "nextUrl": "/support-for-parents",
+          "nextPage": "Information for parents and carers"
+        }) }}
+
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
