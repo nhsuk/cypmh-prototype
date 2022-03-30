@@ -97,7 +97,7 @@
         {% from 'details/macro.njk' import details %}
           {{ details({
             "classes": "nhsuk-expander",
-            "text": "Talking to someone",
+            "text": "Talk to someone",
             "HTML": "
             <p>Although it can be scary or difficult to talk to someone about how you are feeling, it can help you work out what help you need and understand that you’re not alone.</p>
             <h3>Counselling and online professional support</h3>
@@ -115,7 +115,7 @@
             </ul>
             <p><a href=\"https://www.kooth.com\" title=\"The Kooth website\">Kooth</a> is a free, safe and anonymous online mental wellbeing community where you can message or live chat with their support team.</p>
 
-            <h3>Connecting with others </h3>
+            <h3>Connect with others </h3>
             <p>If you\’re struggling with mental health issues, it can help to know you\’re not alone and find out how other people manage similar thoughts and feelings.</p>
             <p>These organisations provide safe ways for you to get in touch with other young people or read more about other people\’s experiences.</p>
             <ul>
@@ -134,12 +134,12 @@
             "classes": "nhsuk-expander",
             "text": "Get information and tools to help yourself",
             "HTML": "
-            <p>It can help to find out more about how are you are feeling and things you can do yourself to help feel better. </p>
+            <p>It can help to find out more about how you are feeling and things you can do yourself to help feel better. </p>
             <ul>
               <li><a href=\"https://www.nhs.uk/every-mind-matters/\" title=\"NHS Every mind matters\">Every Mind Matters</a> provides information and support, including tips on how to improve your mental wellbeing. <a href=\"https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/youth-mental-health/#videos\" title=\"Self care videos on NHS Every mind matters\">Including self-care tips videos for young people</a>.</li>
               <li><a href=\"https://www.youngminds.org.uk/young-person/find-help\" title=\"Find help on the YoungMinds website\">YoungMinds</a> has a wealth of self-help resources on their website, as well as providing dedicated crisis services.</li>
               <li><a href=\"https://www.annafreud.org/on-my-mind/\" title=\"On My Mind | Resources for Young People | Anna Freud Centre\">The Anna Freud Centre’s On My Mind</a> has a self-care hub for young people.</li>
-              <li><a href=\"https://bestforyou.orcha.co.uk\" title=\"NHS Best for you website\">Best for you</a> is on online resources for finding useful mental health apps</li>
+              <li><a href=\"https://bestforyou.orcha.co.uk\" title=\"NHS Best for you website\">Best for you</a> is an online resources for finding useful mental health apps</li>
             </ul>
             "
           }) }}
@@ -153,11 +153,13 @@
             "classes": "nhsuk-expander",
             "text": "Find local services",
             "HTML": "
-            <p>There are a several online tools that can help you find services near to where you live. These are:</p>
+            <p>There are a several online tools that can help you find services near to where you live.</p>
+            <p>These are:</p>
             <ul>
               <li><a href=\"https://hubofhope.co.uk\" title=\"The Hub of Hope website\">The Hub of Hope</a></li>
               <li><a href=\"https://www.themix.org.uk/get-support/find-local-services\" title=\"Find Local Services on the Mix website\">Find local services on The Mix website</a></li>
               <li><a href=\"https://www.annafreud.org/on-my-mind/youth-wellbeing/\" title=\"Youth Wellbeing Directory on the Anna Freud website\">The Anna Freud Centre’s Youth Wellbeing Directory</a></li>
+              <li><a href=\"https://www.youthaccess.org.uk/services/find-your-local-service\" title=\"The Youth Access website\">Youth Access</a></li>
             </ul>
             "
           }) }}
@@ -166,47 +168,58 @@
           {% from 'details/macro.njk' import details %}
           {{ details({
             "classes": "nhsuk-expander",
-            "text": "Further support for children and young people",
+            "text": "Get help in a crisis",
             "HTML": "
-            <h3>Papyrus</h3>
-            <p><a href=\"https://www.papyrus-uk.org\" title=\"Papyrus website\">Papyrus (Prevention of Young Suicide)</a> provides advice and support for young people who feel like they want to take their own life, and all their advice is confidential. You can:</p>
+            <p>These organisations provide support in a crisis</p>
             <ul>
-              <li>call their helpline, HOPELineUK, on 0800 068 41 41</li>
-              <li>text them on 07786 209 687</li>
+              <li>
+                <h3>Papyrus</h3>
+                <p><a href=\"https://www.papyrus-uk.org\" title=\"Papyrus website\">Papyrus (Prevention of Young Suicide)</a> provides advice and support for young people who feel like they want to take their own life.</p>
+                <p>You can:</p>
+                <ul>
+                  <li>call their helpline, HOPELineUK, on 0800 068 41 41</li>
+                  <li>text them on 07786 209 687</li>
+                </ul>
+              </li>
+              <li>
+                <h3>Samaritans</h3>
+                <p><a href=\"https://www.samaritans.org\" title=\"Samaritans website\">Samaritans</a> are an organisation you can ring at any time of the day or night. They'll help you and listen to how you’re feeling.</p>
+                <p>You can:</p>
+                <ul>
+                  <li>call them on 116 123</li>
+                  <li>email them at <a href=\"mailto:jo@samaritans.org\" title=\"Email the Samaritans\">jo@samaritans.org</a></li>
+                </ul>
+              </li>
+              <li>
+                <h3>SHOUT</h3>
+                <p><a href=\"https://giveusashout.org\" title=\"The SHOUT website\">SHOUT</a> provides free, confidential, 24/7 text message support in the UK for anyone who is struggling to cope and anyone in crisis.</p>
+                <p>You can:</p>
+                <ul>
+                  <li>text SHOUT to 85258</li>
+                </ul>
+                <p>This service is free on all major mobile networks.</p>
+              </li>
+            <!--  <li>
+                <h3>BEAT</h3>
+                <p>The charity <a href=\"https://www.beateatingdisorders.org.uk\" title=\"The BEAT website\">Beat</a> provide information to help young people who may be struggling with an eating problem, including an eating disorder.</p>
+                <p>They also provide advice, links to local support and one-to-one webchats.</p>
+                <p>You can call their dedicated helplines:</p>
+                <ul>
+                  <li>Youthline on 0808 801 0711 (for anyone under 18)</li>
+                  <li>Studentline on 0808 801 0811 (for students)</li>
+                </ul>
+                <p>You can also email them at:</p>
+                <ul>
+                  <li><a href=\"mailto:fyp@beateatingdisorders.org.uk\" title=\"Email Youthline\">fyp@beateatingdisorders.org.uk</a> (for anyone under 18)</li>
+                  <li><a href=\"mailto:studentline@beateatingdisorders.org.uk\" title=\"Email Studentline\">studentline@beateatingdisorders.org.uk</a> (for students)</li>
+                </ul>
+                <p>Beat are open 365 days a year. You can contact them on weekdays from 9am to 8pm and weekends from 4pm to 8pm.</p>
+              </li>
+              <li>
+                <h3>RCPSYCH</h3>
+                <p>The Royal College of Psychiatrists also has <a href=\"https://www.rcpsych.ac.uk/mental-health/parents-and-young-people\" title=\"The Royal College of Psychiatrists information for young people\">information for young people, parents and carers about young people's mental health</a>.</p>
+              </li>-->
             </ul>
-
-            <h3>Samaritans</h3>
-            <p><a href=\"https://www.samaritans.org\" title=\"Samaritans website\">Samaritans</a> are an organisation you can ring at any time of the day or night. They'll help you and listen to how you’re feeling. You can:</p>
-            <ul>
-              <li>call them on 116 123</li>
-              <li>email them at <a href=\"mailto:jo@samaritans.org\" title=\"Email the Samaritans\">jo@samaritans.org</a></li>
-            </ul>
-
-            <h3>SHOUT</h3>
-            <p><a href=\"https://giveusashout.org\" title=\"The SHOUT website\">SHOUT</a> provides free, confidential, 24/7 text message support in the UK for anyone who is struggling to cope and anyone in crisis. You can:</p>
-            <ul>
-              <li>text SHOUT to 85258</li>
-            </ul>
-            <p>This service is free on all major mobile networks.</p>
-
-            <h3>BEAT</h3>
-            <p>The charity <a href=\"https://www.beateatingdisorders.org.uk\" title=\"The BEAT website\">Beat</a> provide information to help young people who may be struggling with an eating problem, including an eating disorder.</p>
-            <p>They also provide advice, links to local support and one-to-one webchats.</p>
-            <p>You can call their dedicated helplines:</p>
-            <ul>
-              <li>Youthline on 0808 801 0711 (for anyone under 18)</li>
-              <li>Studentline on 0808 801 0811 (for students)</li>
-            </ul>
-            <p>You can also email them at:</p>
-            <ul>
-              <li><a href=\"mailto:fyp@beateatingdisorders.org.uk\" title=\"Email Youthline\">fyp@beateatingdisorders.org.uk</a> (for anyone under 18)</li>
-              <li><a href=\"mailto:studentline@beateatingdisorders.org.uk\" title=\"Email Studentline\">studentline@beateatingdisorders.org.uk</a> (for students)</li>
-            </ul>
-            <p>Beat are open 365 days a year. You can contact them on weekdays from 9am to 8pm and weekends from 4pm to 8pm.</p>
-
-
-            <h3>RCPSYCH</h3>
-            <p>The Royal College of Psychiatrists also has <a href=\"https://www.rcpsych.ac.uk/mental-health/parents-and-young-people\" title=\"The Royal College of Psychiatrists information for young people\">information for young people, parents and carers about young people's mental health</a>.</p>
             "
           }) }}
 
