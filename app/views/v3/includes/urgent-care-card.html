@@ -1,0 +1,13 @@
+{% from 'card/macro.njk' import card %}
+{{ card({
+    "type": "urgent",
+    "heading": "If it's an emergency, or you need urgent help",
+    "descriptionHtml": "
+    <ul>
+      <li>If you think you or someone else might cause harm to themselves, call 999 or go to A&E now</li>
+      <li>If you need help urgently for your mental health, but it's not an emergency, <a href=\"https://111.nhs.uk\" title =\"get help for NHS 111\">get help from NHS 111</a> online or <a href=\"tel:111\" title=\"call NHS 111 from your computer\">call 111</a></li>
+    </ul>
+    <p>Your mental health is as important as your physical health. You will not be wasting anyone's time.</p>
+    <p><a href=\"https://www.nhs.uk/nhs-services/mental-health-services/where-to-get-urgent-help-for-mental-health/\">Find other ways to get urgent help for your mental health</a></p>
+    "
+  }) }}
