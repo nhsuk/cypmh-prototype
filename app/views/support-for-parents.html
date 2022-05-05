@@ -3,7 +3,9 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout_minihub.html' %}
+{% extends 'layout_sub-topic.html' %}
+{% set topic_title = "Mental health support for children and young people" %}
+{% set page_link = "Information for parents and carers" %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -57,31 +59,7 @@
       Information for parents and carers
       <span class="nhsuk-caption-xl nhsuk-caption--bottom">Mental health support for children and young people</span>
     </h1>
-    {% from 'contents-list/macro.njk' import contentsList %}
 
-    {{ contentsList({
-      items: [
-        {
-          href: "/overview",
-          text: "Overview"
-        },
-        {
-          href: "/nhs-services",
-          text: "NHS services"
-        },
-        {
-          href: "/non-nhs-services",
-          text: "Charity and other services"
-        }
-        ,
-        {
-          href: "/support-for-parents",
-          text: "Information for parents and carers",
-          current: "true"
-        }
-
-      ]
-    }) }}
 
     <p><b>If you’re worried about the mental health of a child or young person, it can be hard to know what to do to help them. You may also feel like you need support for yourself. </b></p>
     <p><b>You’re not alone and there are places both you and your child can turn to for help.</b></p>
@@ -170,16 +148,8 @@
       </section>
     </div>
 
+{% include "includes/sub-topic-nav.html" %}
 
-
-        {% from 'pagination/macro.njk' import pagination %}
-
-        {{ pagination({
-          "previousUrl": "/non-nhs-services",
-          "previousPage": "Charity and other services",
-          "nextUrl": "",
-          "nextPage": ""
-        }) }}
 
 
       <!-- End of content -->

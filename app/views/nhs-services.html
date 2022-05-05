@@ -3,7 +3,9 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout_minihub.html' %}
+{% extends 'layout_sub-topic.html' %}
+{% set topic_title = "Mental health support for children and young people" %}
+{% set page_link = "NHS services" %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -49,31 +51,7 @@
       NHS services
       <span class="nhsuk-caption-xl nhsuk-caption--bottom">Mental health support for children and young people</span>
     </h1>
-    {% from 'contents-list/macro.njk' import contentsList %}
 
-    {{ contentsList({
-      items: [
-        {
-          href: "/overview",
-          text: "Overview"
-        },
-        {
-          href: "/nhs-services",
-          text: "NHS services",
-          current: "true"
-        },
-        {
-          href: "/non-nhs-services",
-          text: "Charity and other services"
-        }
-        ,
-        {
-          href: "/support-for-parents",
-          text: "Information for parents and carers"
-        }
-
-      ]
-    }) }}
 
     <p><b>If you’re a child or young person and struggling with how you are feeling (your mental health) you’re not alone.</b></p>
     <p><b>The NHS provides mental health services for children and young people who need professional support to manage their mental health.</b></p>
@@ -208,16 +186,8 @@
       </div>
     </div>
 
+{% include "includes/sub-topic-nav.html" %}
 
-
-      {% from 'pagination/macro.njk' import pagination %}
-
-      {{ pagination({
-        "previousUrl": "/overview",
-        "previousPage": "Overview",
-        "nextUrl": "/non-nhs-services",
-        "nextPage": "Charity and other services"
-      }) }}
 
 
   </div>

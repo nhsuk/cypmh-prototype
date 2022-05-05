@@ -3,7 +3,12 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout_minihub.html' %}
+{% extends 'layout_sub-topic.html' %}
+<!--{% set base_path = "../../" %}-->
+{% set topic_title = "Mental health support for children and young people" %}
+{% set page_title = "Overview" %}
+{% set page_link = "Overview" %}
+
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -54,36 +59,9 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1>
-      Overview
-      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Mental health support for children and young people</span>
+      [Page title is {{page_title}}] Overview
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">{{ topic_title }}</span>
     </h1>
-
-{% from 'contents-list/macro.njk' import contentsList %}
-
-{{ contentsList({
-  items: [
-    {
-      href: "/overview",
-      text: "Overview",
-      current: "true"
-    },
-    {
-      href: "/nhs-services",
-      text: "NHS services"
-    },
-    {
-      href: "/non-nhs-services",
-      text: "Charity and other services"
-    }
-    ,
-    {
-      href: "/support-for-parents",
-      text: "Information for parents and carers"
-    }
-
-  ]
-}) }}
-
 
 
 <p><b>If you’re under 18 and think you might need help for how you are feeling (your mental health) there are NHS services that can help. There are also lots of charities and organisation that you can go to for support. </b></p>
@@ -107,19 +85,8 @@
 <p><a href="/support-for-parents" title="">Read more information for parents and carers</a></p>
 
 
+{% include "includes/sub-topic-nav.html" %}
 
-
-
-
-
-        {% from 'pagination/macro.njk' import pagination %}
-
-        {{ pagination({
-          "previousUrl": "#",
-          "previousPage": "",
-          "nextUrl": "/nhs-services",
-          "nextPage": "NHS services"
-        }) }}
 
 
       <!-- End of content -->
