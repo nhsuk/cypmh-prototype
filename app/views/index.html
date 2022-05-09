@@ -18,6 +18,23 @@
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+
+    {% from 'breadcrumb/macro.njk' import breadcrumb %}
+    {{ breadcrumb({
+    items: [
+      {
+        href: "https://www.nhs.uk",
+        text: "Home"
+      },
+      {
+        href: "https://www.nhs.uk/mental-health/",
+        text: "Mental health"
+      }
+    ],
+    href: "/overview",
+    text: "Mental health support for children and young people"
+
+    }) }}
 {% endblock %}
 
 <!-- For adding a back link -->
@@ -34,8 +51,8 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
       <div class="nhsuk-u-reading-width">
-        <h1>CYPMHS v4</h1>
-        <p class="nhsuk-lede-text">Lead text</p>
+        <h1>Mental health support for children and young people</h1>
+        <p class="nhsuk-lede-text">Lead text for main sub topic page</p>
       </div>
       <article>
         <div class="nhsuk-u-reading-width"></div>
@@ -43,23 +60,23 @@
             <section>
               <ul class="nhsuk-hub-key-links beta-hub-key-links">
                   <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
-                    <a href="medicine-a-about">
+                    <a class="app-related-nav__link" href="/overview">
                       Overview
                     </a>
                   </li>
                   <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
-                    <a href="medicine-a-who-can-and-cannot-take">
+                    <a class="app-related-nav__link" href="/nhs-services">
                       NHS services
                     </a>
                   </li>
                   <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
-                    <a href="medicine-a-how-and-when-to-take">
-                      Charities and ...
+                    <a class="app-related-nav__link" href="/non-nhs-services">
+                      Charity and other services
                     </a>
                   </li>
                   <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
-                  <a class="app-related-nav__link" href="medicine-a-storing">
-                    Parents
+                  <a class="app-related-nav__link" href="/support-for-parents">
+                    Information for parents and carers
                   </a>
                   </li>
               </ul>
@@ -68,7 +85,7 @@
             <div>
               <div class="nhsuk-u-margin-top-6 ">
                 <div class="beta-hub-related-links-title">
-                  <h2 class="nhsuk-heading-s ">Related conditions</h2>
+                  <h2 class="nhsuk-heading-s ">Related conditions/ information</h2>
                 </div>
                 <ul class="beta-hub-related-links">
                   <li class="beta-hub-related-links__list-item">
