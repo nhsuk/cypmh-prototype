@@ -1,0 +1,185 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout_sub-topic.html' %}
+{% set base_path = "../../" %}
+{% set page_title = "Getting an assessment" %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+    {% from 'breadcrumb/macro.njk' import breadcrumb %}
+    {{ breadcrumb({
+    items: [
+      {
+        href: "https://www.nhs.uk",
+        text: "Home"
+      },
+      {
+        href: "/",
+        text: "Mental health support for children and young people"
+      },
+      {
+        href: "/nhs-services",
+        text: "NHS services"
+      }
+    ],
+    href: "/",
+    text: "Getting an assessment"
+    }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>
+      Getting an assessment
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">NHS services</span>
+    </h1>
+
+    <p><b>xxxx</b></p>
+
+    {% include "includes/urgent-care-card.html" %}
+        <div>
+
+          <section>
+
+            <!-- 1st task -->
+            {% from 'details/macro.njk' import details %}
+              {{ details({
+                "classes": "nhsuk-expander",
+                "text": "One",
+                "HTML": "
+                <h3>If you are a child or young person</h3>
+                <h2>Heading</h2>
+                <p>Paragraph</p>
+                <ul>
+                  <li>list</li>
+                  <li>list</li>
+                  <li>list</li>
+                </ul>
+                <p>paragraph</p>
+                <p>If you are under 16, you may need your parent or carer’s consent to be referred.</p>
+                <p><a href=\"\" title=\"\">Link</a></p>
+                <h3>Subheading</h3>
+                <p>Paragraph</p>
+                "
+              }) }}
+
+
+              <!-- 2nd task -->
+              {% from 'details/macro.njk' import details %}
+                {{ details({
+                  "classes": "nhsuk-expander",
+                  "text": "Two",
+                  "HTML": "
+                  <h3>Other professionals can refer you</h3>
+                  <h2>Heading</h2>
+                  <p>Paragraph</p>
+                  <ul>
+                    <li>list</li>
+                    <li>list</li>
+                    <li>list</li>
+                  </ul>
+                  <p>paragraph</p>
+                  <p>If you are under 16, you may need your parent or carer’s consent to be referred.</p>
+                  <p><a href=\"\" title=\"\">Link</a></p>
+                  <h3>Subheading</h3>
+                  <p>Paragraph</p>
+                  "
+                }) }}
+
+
+                <!-- 3rd task -->
+                {% from 'details/macro.njk' import details %}
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "Three",
+                    "HTML": "
+                    <h2>Heading</h2>
+                    <p>Paragraph</p>
+                    <ul>
+                      <li>list</li>
+                      <li>list</li>
+                      <li>list</li>
+                    </ul>
+                    <p>paragraph</p>
+                    <p>If you are under 16, you may need your parent or carer’s consent to be referred.</p>
+                    <p><a href=\"\" title=\"\">Link</a></p>
+                    <h3>Subheading</h3>
+                    <p>Paragraph</p>
+                    "
+                  }) }}
+                  <!-- 4th task -->
+                {% from 'details/macro.njk' import details %}
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "Four",
+                    "HTML": "
+                    <h2>Heading</h2>
+                    <p>Paragraph</p>
+                    <ul>
+                      <li>list</li>
+                      <li>list</li>
+                      <li>list</li>
+                    </ul>
+                    <p>paragraph</p>
+                    <p>If you are under 16, you may need your parent or carer’s consent to be referred.</p>
+                    <p><a href=\"\" title=\"\">Link</a></p>
+                    <h3>Subheading</h3>
+                    <p>Paragraph</p>
+                    "
+                  }) }}
+
+                  {% from 'details/macro.njk' import details %}
+
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "Five",
+                    "HTML": "
+                    <h2>Heading</h2>
+                    <p>Paragraph</p>
+                    <ul>
+                      <li>list</li>
+                      <li>list</li>
+                      <li>list</li>
+                    </ul>
+                    <p>paragraph</p>
+                    <p>If you are under 16, you may need your parent or carer’s consent to be referred.</p>
+                    <p><a href=\"\" title=\"\">Link</a></p>
+                    <h3>Subheading</h3>
+                    <p>Paragraph</p>
+                    "
+                  }) }}
+                </section>
+              </div>
+      <!-- End of content -->
+    </div>
+  </div>
+{% endblock %}
