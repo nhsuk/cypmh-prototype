@@ -6,6 +6,7 @@
 {% extends 'layout_sub-topic.html' %}
 {% set base_path = "../../" %}
 {% set page_title = "Getting a referral" %}
+{% set page_link = "Getting a referral" %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -38,11 +39,11 @@
       }
       ,
       {
-        href: "/nhs-services",
+        href: "/getting-help-from-the-NHS",
         text: "Getting help from the NHS"
       }
     ],
-    href: "/",
+    href: "/referrals",
     text: "Getting a referral"
     }) }}
 {% endblock %}
@@ -146,7 +147,7 @@
                     <p>Once you have a referral, or have referred yourself, you should be told how long it will take to hear from the service.</p>
                     <p>If you do not get this information, it can be helpful to ask so that you know what to expect.</p>
                     <p>There is likely to be a waiting list, and how long you need to wait will depend on the area that you live in. There is usually only a short wait to be contacted for a first appointment to understand your needs, but there may be a longer wait before you start receiving support.</p>
-                    <p>This can be frustrating if you feel you need support sooner, but there are <a href=\"/non-nhs-services\" title=\"Charity and other services\">things you can do to help yourself while you wait</a>.</p>
+                    <p>This can be frustrating if you feel you need support sooner, but there are <a href=\"/charities-and-other-services\" title=\"Charity and other services\">things you can do to help yourself while you wait</a>.</p>
                     <p>If you haven’t heard anything after a few weeks, you can try contacting the service. Ask the person who referred you for the contact details, if you don’t have them.</p>
                     "
                   }) }}
@@ -158,7 +159,7 @@
                       "text": "Look after yourself while you’re waiting for support",
                       "HTML": "
                     <p>If there is going to be a wait for support, it can be helpful to have people around you that you can talk to who are aware that you are experiencing difficulties.</p>
-                    <p>There are also lots of charities that provide direct support such as counselling and helplines. Read more about <a href=\"/non-nhs-services\" title=\"NHS charity and other mental health support\">charity and other mental health support</a>.</p>
+                    <p>There are also lots of charities that provide direct support such as counselling and helplines. Read more about <a href=\"/charities-and-other-services\" title=\"NHS charity and other mental health support\">charity and other mental health support</a>.</p>
                     <p>If your situation changes or gets worse, then call or email the service you were referred to, to let them know what has changed. Or <a href=\"https://www.nhs.uk/nhs-services/mental-health-services/where-to-get-urgent-help-for-mental-health/\">get urgent help if you need it</a>.</p>
                     <p>Self-help techniques can also be a good way to manage your feelings or worries while you wait to be seen. Different things work for different people, but might include activities like listening to podcasts, using mental health apps, doing some exercise and being kind to yourself.</p>
                     <p>The charity the <a href=\"https://www.annafreud.org/on-my-mind/self-care/\">Anna Freud Centre</a> and <a href=\"https://www.nhs.uk/every-mind-matters/\" title=\"NHS Every mind matters website\">Every mind matters</a> have lots of ideas.</p>
@@ -189,7 +190,7 @@
 
                 </section>
               </div>
-
+              {% include "includes/nhs-child-nav.html" %}
       <!-- End of content -->
 
     </div>

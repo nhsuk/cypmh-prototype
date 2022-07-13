@@ -6,6 +6,7 @@
 {% extends 'layout_sub-topic.html' %}
 {% set base_path = "../../" %}
 {% set page_title = "Getting support" %}
+{% set page_link = "Getting support" %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -37,11 +38,11 @@
         text: "Mental health support for children and young people"
       },
       {
-        href: "/nhs-services",
+        href: "/getting-help-from-the-NHS",
         text: "Getting help from the NHS"
       }
     ],
-    href: "/",
+    href: "/getting-support",
     text: "Getting support"
     }) }}
 {% endblock %}
@@ -171,6 +172,7 @@
                   }) }}
                 </section>
               </div>
+              {% include "includes/nhs-child-nav.html" %}
       <!-- End of content -->
     </div>
   </div>
