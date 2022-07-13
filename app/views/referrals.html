@@ -39,7 +39,7 @@
       ,
       {
         href: "/nhs-services",
-        text: "NHS services"
+        text: "Getting help from the NHS"
       }
     ],
     href: "/",
@@ -61,47 +61,44 @@
   <div class="nhsuk-grid-column-two-thirds">
     <h1>
       Getting a referral
-      <span class="nhsuk-caption-xl nhsuk-caption--bottom">NHS services</span>
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Getting help from the NHS</span>
     </h1>
 
-    <p><b>The first step to getting support from NHS mental health services is usually getting a referral from a professional such as a GP, teacher or social worker. </b></p>
-    <p><b>The referer will give your details to a specialist service that can offer you help, support and treatment.</b></p>
-    <p><b>For some services you may also be able to refer yourself - or your parent or carer can refer you.</b></p>
-
+    <p><b>If you’ve been referred to your local children and adolescent mental health services (CAMHS), they will work with you to understand what support you need.</b></p>
+    <p>If you are a parent or carer, and your child under 16, you may be asked to be involved in these discussions, but in some cases CAMHS may suggest they speak to your child alone.</p>
+    <p>For some services you may also be able to refer yourself - or your parent or carer can refer you.</p>
     {% include "includes/urgent-care-card.html" %}
         <div>
-
           <section>
 
             <!-- 1st task -->
             {% from 'details/macro.njk' import details %}
               {{ details({
                 "classes": "nhsuk-expander",
-                "text": "Speak to your GP",
+                "text": "Speak to a GP",
                 "HTML": "
                 <h3>If you are a child or young person</h3>
-                <p>A GP can talk to you, or your parent or carer, about what options are available to you in your area and refer you to your local children and adolescent mental health services (CAMHS). </p>
-                <p>Before speaking to a GP, it’s a good idea to think about what to say. You could write down some notes to take with you.</p>
-                <p>Speaking to a GP about your mental health can seem scary, but they are there to listen to you and help you.</p>
-                <p>Make sure you tell the GP as much information as you can about </p>
+                <p>A GP can talk to you, or your parent or carer, about what options are available to you in your area and refer you to your local children and adolescent mental health services (CAMHS).</p>
+                <p>Speaking to a GP about your mental health can seem scary, but they are there to listen to you and help you. It can help to think about what you want to say beforehand and write down some notes.</p>
+                <p>Make sure you tell the GP as much information as you can about:</p>
                 <ul>
-                  <li>how you’ve been feeling</li>
-                  <li>how long you been feeling like this</li>
+                  <li>how you’ve been feeling and what you’ve been experiencing </li>
+                  <li>how long you been feeling like or experiencing this</li>
                   <li>how it’s affecting your day-to-day life</li>
                 </ul>
                 <p>It’s really important to be as honest as you can. This will help the GP get a better idea of the support you need.</p>
-                <p>If you are under 16, you may need your parent or carer’s consent to be referred.</p>
-                <p><a href=\"https://www.youngminds.org.uk/young-person/your-guide-to-support/how-to-speak-to-your-gp/\" title=\"Young Minds website\">Young Minds has more information about how to speak to your GP about your mental health</a></p>
+                <p>If you are under 16, you may need your parent or carer’s consent to be referred. </p>
+                <p><a href=\"https://www.youngminds.org.uk/young-person/your-guide-to-support/how-to-speak-to-your-gp/\" title=\"Young Minds website\">Young Minds has more information about how to speak to your GP about your mental health </a></p>
                 <h3>If you are a parent or carer</h3>
-                <p>You can speak to a GP with, or on behalf of, your child. They can give you more information about different types of treatment and services that are available locally. They may want to speak to your child before referring them to CYPMHS but this is not always essential.</p>
-                <p><a href=\"https://www.youngminds.org.uk/young-person/your-guide-to-support/how-to-speak-to-your-gp/\" title=\"Young Minds website\">Young Minds has more information about how to speak to a GP about your child's mental health</a></p>
+                <p>You can speak to a GP with, or on behalf of, your child. The GP can give you more information about different types of support and services that are available locally. They may want to speak to your child before referring them to a mental health service, but this is not always essential.</p>
+                <p><a href=\"Young Minds has more information about speaking to a GP about your child’s mental health.\" title=\"Young Minds website\">Young Minds has more information about how to speak to a GP about your child's mental health</a></p>
                 <div class=\"nhsuk-action-link\">
                   <a class=\"nhsuk-action-link__link\" href=\"https://www.nhs.uk/service-search/find-a-gp\">
                     <svg class=\"nhsuk-icon nhsuk-icon__arrow-right-circle\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" width=\"36\" height=\"36\">
                       <path d=\"M0 0h24v24H0z\" fill=\"none\"></path>
                       <path d=\"M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z\"></path>
                     </svg>
-                    <span class=\"nhsuk-action-link__text\">Find your local GP</span>
+                    <span class=\"nhsuk-action-link__text\">Find a GP</span>
                   </a>
                 </div>
                 "
@@ -114,19 +111,28 @@
                   "classes": "nhsuk-expander",
                   "text": "Other ways to get a referral",
                   "HTML": "
-                  <h3>Other professionals can refer you</h3>
-                  <p>If you can’t, or don’t want to, talk to a GP, there are other people you can ask to refer you to mental health services. </p>
-                  <p>You can ask:</p>
+                  <p>If you can’t, or don’t want to, talk to a GP, there are ways you can be referred to mental health services</p>
+                  <h3>You can refer yourself (self-referral)</h3>
+                  <p>You can often refer yourself, or your parent or carer can refer you.</p>
+                  <p>To find out if you can refer yourself to a service, you’ll need to contact your local children and adolescent mental health services (CAMHS).</p>
+                  <p>The contact details will be on your local CAMHS website, which you can find by searching online for ‘CAMHS’ and the county or town you live in, for example ‘CAMHS Kent’.</p>
+                  <p>They will usually have a telephone number, email address or form to fill in.</p>
+                  <p>They might ask for information such as:</p>
                   <ul>
-                    <li>a teacher</li>
+                    <li>what mental health difficulties you are having</li>
+                    <li>how it is affecting your daily life</li>
+                    <li>how long it has been going on and if it is getting worse?</li>
+                    <li>what you have already tried and what helps</li>
+                  </ul>
+                  <p>Try and give as much information at you can, even if it is difficult or feels very personal. The information you give will help make sure you get the support you need.</p>
+                  <h3>You can speak to other professionals</h3>
+                  <p>You can ask other people to refer you, such as:</p>
+                  <ul>
+                    <li>a teacher </li>
                     <li>a school nurse</li>
                     <li>a youth worker</li>
                     <li>a social worker, if you already have one</li>
                   </ul>
-                  <h3>You can sometimes refer yourself</h3>
-                  <!--<p>You may also be able to refer yourself, or your parent or carer can refer you.</p>-->
-                  <p>To find out if you can refer yourself to a service, you, or your parent or carer, need to contact your local children and adolescent mental health services (CAMHS).</p>
-                  <p>The contact details will be on your local CAMHS website, which you can find by searching online for ‘CAMHS’ and the county or town you live in, for example ‘CAMHS Kent’. They will usually have a telephone number, email address or form to fill in.</p>
                   "
                 }) }}
 
@@ -137,65 +143,51 @@
                     "classes": "nhsuk-expander",
                     "text": "Ask when you’re likely to hear from the service",
                     "HTML": "
-                    <p>Once you have a referral, or have referred yourself, you, or your parent or carer, should be told how long it will take to hear from the service.</p>
+                    <p>Once you have a referral, or have referred yourself, you should be told how long it will take to hear from the service.</p>
                     <p>If you do not get this information, it can be helpful to ask so that you know what to expect.</p>
-                    <p>There is likely to be a waiting list, and how long you need to wait will depend on the area that you live in. There is usually a short wait to be contacted for an initial assessment, but there may be a longer wait before you start receiving support.</p>
-                    <p>This can be frustrating if you feel you need support sooner, but there are things you can do to help yourself while you wait.</p>
+                    <p>There is likely to be a waiting list, and how long you need to wait will depend on the area that you live in. There is usually only a short wait to be contacted for a first appointment to understand your needs, but there may be a longer wait before you start receiving support.</p>
+                    <p>This can be frustrating if you feel you need support sooner, but there are <a href=\"/non-nhs-services\" title=\"Charity and other services\">things you can do to help yourself while you wait</a>.</p>
                     <p>If you haven’t heard anything after a few weeks, you can try contacting the service. Ask the person who referred you for the contact details, if you don’t have them.</p>
                     "
                   }) }}
+
                   <!-- 4th task -->
-                {% from 'details/macro.njk' import details %}
-                  {{ details({
-                    "classes": "nhsuk-expander",
-                    "text": "Look after yourself while you’re waiting for support",
-                    "HTML": "
-                    <h3>If you are a child or young person</h3>
-                    <p>If there is going to be a wait for support, it can be helpful to have people around you that you can talk to who are aware that you are experiencing difficulties. </p>
-                    <p>There are also lots of charities that provide direct support such as counselling and helplines.</p>
-                    <p> <a href=\"/non-nhs-services\" title=\"\">Read more about charity and other mental health support</a>.</p>
-                    <p>If your situation changes or gets worse, then call or email the service you were referred to, to let them know what has changed. Or <a href=\"https://www.nhs.uk/nhs-services/mental-health-services/where-to-get-urgent-help-for-mental-health/\">get urgent help</a> if you need it.</p>
-                    <p> Self-help techniques can also be a good way to manage your feelings or worries while you wait to be seen.</p>
-                    <p>The charity the <a href=\"https://www.annafreud.org/on-my-mind/self-care/\">Anna Freud Centre has lots of ideas</a>.</p>
-                    <h3>If you are a parent or carer</h3>
-                    <p><a href=\"/support-for-parents\" title=\"\">Find out about sources of support for parents and carers</a></p>
+                  {% from 'details/macro.njk' import details %}
+                    {{ details({
+                      "classes": "nhsuk-expander",
+                      "text": "Look after yourself while you’re waiting for support",
+                      "HTML": "
+                    <p>If there is going to be a wait for support, it can be helpful to have people around you that you can talk to who are aware that you are experiencing difficulties.</p>
+                    <p>There are also lots of charities that provide direct support such as counselling and helplines. Read more about <a href=\"/non-nhs-services\" title=\"NHS charity and other mental health support\">charity and other mental health support</a>.</p>
+                    <p>If your situation changes or gets worse, then call or email the service you were referred to, to let them know what has changed. Or <a href=\"https://www.nhs.uk/nhs-services/mental-health-services/where-to-get-urgent-help-for-mental-health/\">get urgent help if you need it</a>.</p>
+                    <p>Self-help techniques can also be a good way to manage your feelings or worries while you wait to be seen. Different things work for different people, but might include activities like listening to podcasts, using mental health apps, doing some exercise and being kind to yourself.</p>
+                    <p>The charity the <a href=\"https://www.annafreud.org/on-my-mind/self-care/\">Anna Freud Centre</a> and <a href=\"https://www.nhs.uk/every-mind-matters/\" title=\"NHS Every mind matters website\">Every mind matters</a> have lots of ideas.</p>
                     "
                   }) }}
 
                   {% from 'details/macro.njk' import details %}
-
-                  {{ details({
-                    "classes": "nhsuk-expander",
-                    "text": "What to do if you’re having difficulty getting a referral",
-                    "HTML": "
-                      <p>If you can’t get a referral from a GP, you can ask a different GP or find out who else can refer you.</p>
-                      <p>It’s important to give the person referring you as much information as you can about how you’ve been feeling.</p>
-                      <div class=\"nhsuk-inset-text\">
-                        <span class=\"nhsuk-u-visually-hidden\">Information: </span><p>It may be useful to know <a href=\"javascript: void(0)\" title=\"\">how GPs decide when to refer someone</a> to children and young people’s mental health services.</p>
-                      </div>
-                      <p>If you still cannot get a referral, then there are people who may be able to speak up for you or give you advice. This is called advocacy or being an advocate.</p>
+                    {{ details({
+                      "classes": "nhsuk-expander",
+                      "text": "What to do if you’re having difficulty getting a referral",
+                      "HTML": "
+                      <p>If you can’t get a referral, you can ask a different GP or teacher or find out who else can refer you. You can also try referring yourself, if you haven’t already.</p>
+                      <p>It’s important to give the person referring you as much information as you can about how you’ve been feeling or what you’ve been experiencing.</p>
+                      <p>If they can’t refer you to your local children and young people’s mental health services, there may be other services that can help.</p>
+                      <p>If you still cannot get a referral or the support you need, then there are people who may be able to speak up for you or give you advice. This is called advocacy or being an advocate.</p>
                       <p>You can find out more about advocacy from:</p>
                       <ul>
-                        <li><a href=\"https://www.mind.org.uk/information-support/guides-to-support-and-services/advocacy/what-is-advocacy/\">Mind</a> – a mental health charity providing information and support.</li>
-                        <li><a href=\"https://www.nhs.uk/nhs-services/hospitals/what-is-pals-patient-advice-and-liaison-service/\">Patients advice and liaison services (PALS)</a>  - an NHS service providing confidential advice and support.</li>
+                        <li><a href=\"https://www.mind.org.uk/information-support/guides-to-support-and-services/advocacy/what-is-advocacy/\" title=\"Mind - Advocacy in mental health\">Mind</a> – a mental health charity providing information and support.</li>
+                        <li>Patients advice and liaison services <a href=\"https://www.nhs.uk/nhs-services/hospitals/what-is-pals-patient-advice-and-liaison-service/\" title=\"What is PALS (Patient Advice and Liaison Service)\">(PALS)</a>  - an NHS service providing confidential advice and support which you can contact through your local hospital.</li>
                       </ul>
                       <p>You can also do your own research into other services. </p>
                       <ul>
-                        <li><a href=\"https://www.annafreud.org/on-my-mind/youth-wellbeing/\">There is a youth wellbeing directory on the Anna Freud charity website</a>.</li>
-                        <li><a href=\"https://www.youthaccess.org.uk/services/find-your-local-service\">You can search for local services on the Youth Access website</a>.</li>
+                        <li>There is a <a href=\"https://www.annafreud.org/on-my-mind/youth-wellbeing/\" title=\"Anna Freud - Youth wellbeing directory\">youth wellbeing directory</a> on the Anna Freud charity website.</li>
+                        <li><a href=\"https://www.youthaccess.org.uk/services/find-your-local-service\" title=\"Youth access - Find Your Local Service\">You can search for local services</a> on the Youth Access website</li>
                       </ul>
                     "
                   }) }}
 
                 </section>
-                <section>
-                  <p></p>
-                    <!-- can't task -->
-
-
-
-
-                  </section>
               </div>
 
       <!-- End of content -->
