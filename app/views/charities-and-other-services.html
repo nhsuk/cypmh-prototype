@@ -57,7 +57,7 @@
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-<div class="nhsuk-grid-row">
+Connect<div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1>
       Charity and other services
@@ -65,11 +65,11 @@
     </h1>
     <p><b>As well as NHS services there are lots of other organisations for children and young people that provide information and services to help you manage your thoughts and feelings (your mental health).</b></p>
     <p>If you are a parent or carer, you can suggest some of these resources to your child, or get advice for yourself.</p>
-
     {% include "includes/urgent-care-card.html" %}
+  <div>
+  <section>
 
-    <div>
-      <section>
+
 
 
         <!-- 1st -->
@@ -82,15 +82,15 @@
             <h3>Counselling and online professional support</h3>
             <p>These organisations provide support from counsellors and other people trained to support children and young people.</p>
             <h4>Childline</h4>
-            <p><a href=\"https://www.childline.org.uk\" title=\"Childline website\">ChildLine</a> provides a confidential telephone and online counselling service for anyone under 19 with a problem. You can:</p>
+            <p><a href=\"https://www.childline.org.uk\" title=\"Childline website\">ChildLine</a> provides a confidential telephone and online counselling service for anyone under 19. You can:</p>
             <ul>
-              <li>call 0800 1111 any time for free</li>
+              <li>call 0800 1111 any time for free – lines are open 24 hours a day</li>
               <li>have an <a href=\"https://www.childline.org.uk/get-support/1-2-1-counsellor-chat/\" title=\"Childline - Chat with a counsellor online page\">online chat with a counsellor</a></li>
             </ul>
             <h4>The Mix</h4>
-            <p><a href=\"https://www.themix.org.uk\"  title=\"The Mix website\">The Mix</a> provides a free confidential telephone helpline and online service for anyone under 25 that aims to find young people the best help, whatever the problem. You can:</p>
+            <p><a href=\"https://www.themix.org.uk\"  title=\"The Mix website\">The Mix</a> provides a free confidential telephone helpline and online service for anyone under 25, that aims to find young people the best help, whatever the problem. You can:</p>
             <ul>
-              <li>call 0808 808 4994 for free – lines are open from 11am to 11pm every day</li>
+              <li>•	call 0808 808 4994 for free – lines are open from 11am to 11pm every day</li>
               <li><a href=\"https://www.themix.org.uk/get-support/speak-to-our-team/email-us\" title=\"Email The Mix on their website\">email question to The Mix</a></li>
               <li><a href=\"https://www.themix.org.uk/get-support/speak-to-our-team/the-mix-counselling-service\" title=\"The Mix councelling service web page\">get counselling</a></li>
             </ul>
@@ -108,44 +108,7 @@
             "
           }) }}
 
-
           <!-- 2nd -->
-          {% from 'details/macro.njk' import details %}
-          {{ details({
-            "classes": "nhsuk-expander",
-            "text": "Get information and tools to help yourself",
-            "HTML": "
-            <p>It can help to find out more about how you are feeling and things you can do yourself to help feel better. </p>
-            <ul>
-              <li><a href=\"https://www.nhs.uk/every-mind-matters/\" title=\"NHS Every mind matters\">Every Mind Matters</a> provides information and support, including tips on how to improve your mental wellbeing. <a href=\"https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/youth-mental-health/#videos\" title=\"Self care videos on NHS Every mind matters\">Including self-care tips videos for young people</a>.</li>
-              <li><a href=\"https://www.youngminds.org.uk/young-person/find-help\" title=\"Find help on the YoungMinds website\">YoungMinds</a> has a wealth of self-help resources on their website, as well as providing dedicated crisis services.</li>
-              <li><a href=\"https://www.annafreud.org/on-my-mind/\" title=\"On My Mind | Resources for Young People | Anna Freud Centre\">The Anna Freud Centre’s On My Mind</a> has a self-care hub for young people.</li>
-              <li><a href=\"https://bestforyou.orcha.co.uk\" title=\"NHS Best for you website\">Best for you</a> is an online resources for finding useful mental health apps</li>
-            </ul>
-            "
-          }) }}
-
-
-
-
-          <!-- 3rd -->
-          {% from 'details/macro.njk' import details %}
-          {{ details({
-            "classes": "nhsuk-expander",
-            "text": "Find local services",
-            "HTML": "
-            <p>There are a several online tools that can help you find services near to where you live.</p>
-            <p>These are:</p>
-            <ul>
-              <li><a href=\"https://hubofhope.co.uk\" title=\"The Hub of Hope website\">The Hub of Hope</a></li>
-              <li><a href=\"https://www.themix.org.uk/get-support/find-local-services\" title=\"Find Local Services on the Mix website\">Find local services on The Mix website</a></li>
-              <li><a href=\"https://www.annafreud.org/on-my-mind/youth-wellbeing/\" title=\"Youth Wellbeing Directory on the Anna Freud website\">The Anna Freud Centre’s Youth Wellbeing Directory</a></li>
-              <li><a href=\"https://www.youthaccess.org.uk/services/find-your-local-service\" title=\"The Youth Access website\">Youth Access</a></li>
-            </ul>
-            "
-          }) }}
-
-          <!-- 4th -->
           {% from 'details/macro.njk' import details %}
           {{ details({
             "classes": "nhsuk-expander",
@@ -156,15 +119,15 @@
             <p><a href=\"https://www.papyrus-uk.org\" title=\"Papyrus website\">Papyrus (Prevention of Young Suicide)</a> provides advice and support for young people who feel like they want to take their own life.</p>
             <p>You can:</p>
             <ul>
-              <li>call their helpline, HOPELineUK, on 0800 068 41 41</li>
-              <li>text them on 07786 209 687</li>
+              <li>call their free helpline on 0800 068 41 41 – lines are open from 9am to midnight every day</li>
+              <li>text them on 07786 209 687 or email <a href=\"mailtto:pat@papyrus-uk.org\" title=\"email Papyrus\">pat@papyrus-uk.org</a></li>
             </ul>
 
             <h3>Samaritans</h3>
             <p><a href=\"https://www.samaritans.org\" title=\"Samaritans website\">Samaritans</a> are an organisation you can ring at any time of the day or night. They'll help you and listen to how you’re feeling.</p>
             <p>You can:</p>
             <ul>
-              <li>call them on 116 123</li>
+              <li>call them free and confidentially on 116 123 – line are open 24 hours a day</li>
               <li>email them at <a href=\"mailto:jo@samaritans.org\" title=\"Email the Samaritans\">jo@samaritans.org</a></li>
             </ul>
 
@@ -174,30 +137,57 @@
             <ul>
               <li>text SHOUT to 85258</li>
             </ul>
-            <p>This service is free on all major mobile networks.</p>
-            <!--  <li>
-                <h3>BEAT</h3>
-                <p>The charity <a href=\"https://www.beateatingdisorders.org.uk\" title=\"The BEAT website\">Beat</a> provide information to help young people who may be struggling with an eating problem, including an eating disorder.</p>
-                <p>They also provide advice, links to local support and one-to-one webchats.</p>
-                <p>You can call their dedicated helplines:</p>
-                <ul>
-                  <li>Youthline on 0808 801 0711 (for anyone under 18)</li>
-                  <li>Studentline on 0808 801 0811 (for students)</li>
-                </ul>
-                <p>You can also email them at:</p>
-                <ul>
-                  <li><a href=\"mailto:fyp@beateatingdisorders.org.uk\" title=\"Email Youthline\">fyp@beateatingdisorders.org.uk</a> (for anyone under 18)</li>
-                  <li><a href=\"mailto:studentline@beateatingdisorders.org.uk\" title=\"Email Studentline\">studentline@beateatingdisorders.org.uk</a> (for students)</li>
-                </ul>
-                <p>Beat are open 365 days a year. You can contact them on weekdays from 9am to 8pm and weekends from 4pm to 8pm.</p>
-              </li>
-              <li>
-                <h3>RCPSYCH</h3>
-                <p>The Royal College of Psychiatrists also has <a href=\"https://www.rcpsych.ac.uk/mental-health/parents-and-young-people\" title=\"The Royal College of Psychiatrists information for young people\">information for young people, parents and carers about young people's mental health</a>.</p>
-              </li>-->
 
+            <h3>Connect with others </H3>
+            <p>If you’re struggling with mental health issues, it can help to know you’re not alone and find out how other young people manage similar thoughts and feelings.</p>
+            <p>These organisations provide safe ways for you to get in touch with other young people or read more about other people’s experiences.</p>
+            <ul>
+              <li>You can visit <a href=\"https://www.childline.org.uk/get-support/message-boards/\" title=\"Childline's message baords\">Childline’s message boards</a> to ask questions and share experiences</li>
+              <li><a href=\"https://www.themix.org.uk/get-support\" title=\"The Mix get support pages \">The Mix has online group chats and discussion boards</a></li>
+              <li><a href=\"https://www.kooth.com\" title=\"Kooth's homepage\">Kooth has active and supportive discussion boards</a></li>
+              <li>You can read other people’s stories on the <a href=\"https://www.youngminds.org.uk/young-person/blog/\" title=\"Young Minds real stories page\">Young Minds website</a></li>
+            </ul>
             "
           }) }}
+
+
+          <!-- 3rd -->
+          {% from 'details/macro.njk' import details %}
+          {{ details({
+            "classes": "nhsuk-expander",
+            "text": "Get information and tools to help yourself",
+            "HTML": "
+            <p>It can be helpful to find out more about how you are feeling, and how to help manage your thoughts and feelings.  </p>
+            <ul>
+              <li><a href=\"https://www.nhs.uk/every-mind-matters/\" title=\"NHS Every mind matters\">Every Mind Matters</a> provides information and support, including tips on how to improve your mental wellbeing</li>
+              <li><a href=\"https://www.youngminds.org.uk/young-person/find-help\" title=\"Find help on the YoungMinds website\">YoungMinds</a> has a wealth of self-help resources on their website, as well as providing dedicated crisis services</li>
+              <li><a href=\"https://www.annafreud.org/on-my-mind/\" title=\"On My Mind | Resources for Young People | Anna Freud Centre\">The Anna Freud Centre’s On My Mind</a> has a self-care hub for young people</li>
+              <li><a href=\"https://bestforyou.orcha.co.uk\" title=\"NHS Best for you website\">Best for you</a> is on online resource for finding useful mental health apps</li>
+            </ul>
+            "
+          }) }}
+
+
+
+
+          <!-- 4th -->
+          {% from 'details/macro.njk' import details %}
+          {{ details({
+            "classes": "nhsuk-expander",
+            "text": "Find local services",
+            "HTML": "
+            <p>There are a several online tools that can help you find services close to where you live.</p>
+            <p>These are:</p>
+            <ul>
+              <li><a href=\"https://hubofhope.co.uk\" title=\"The Hub of Hope website\">The Hub of Hope</a></li>
+              <li><a href=\"https://www.themix.org.uk/get-support/find-local-services\" title=\"Find Local Services on the Mix website\">Find local services on The Mix website</a></li>
+              <li><a href=\"https://www.annafreud.org/on-my-mind/youth-wellbeing/\" title=\"Youth Wellbeing Directory on the Anna Freud website\">The Anna Freud Centre’s Youth Wellbeing Directory</a></li>
+              <li><a href=\"https://www.youthaccess.org.uk/services/find-your-local-service\" title=\"The Youth Access website\">Youth Access</a></li>
+            </ul>
+            "
+          }) }}
+
+
 
       </section>
 
