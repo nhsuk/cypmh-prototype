@@ -63,54 +63,46 @@
       Moving on
       <span class="nhsuk-caption-xl nhsuk-caption--bottom">Getting help from the NHS</span>
     </h1>
-
-    <p><b>xxxx</b></p>
-
-    {% include "includes/urgent-care-card.html" %}
+    <p><b>At some point you may move on from getting support from CAMHS.</b></p>
+    <p>This might be because:</p>
+    <ul>
+      <li>You no longer need the same amount of support</li>
+      <li>A different type of support is more suitable </li>
+      <li>You are over 18 and adult mental health services may be more suitable for you</li>
+    </ul>
+    <p>Moving on from the support you know can be scary and you may need extra help and information during this time.</p>
+      {% include "includes/urgent-care-card.html" %}
         <div>
-
           <section>
+            <h2>Changing or finishing your support and treatment</h2>
+            <p>If you’re receiving support for your mental health, you’ll regularly talk about your progress and how things are going. </p>
+            <p>If it’s decided that you no longer need as much support, or need support from a different service, your CAMHS team will help support you to move on (transition).</p>
 
             <!-- 1st task -->
             {% from 'details/macro.njk' import details %}
               {{ details({
                 "classes": "nhsuk-expander",
-                "text": "One",
+                "text": "You’ll be given time to prepare",
                 "HTML": "
-                <h2>Heading</h2>
-                <p>Paragraph</p>
-                <ul>
-                  <li>list</li>
-                  <li>list</li>
-                  <li>list</li>
-                </ul>
-                <p>paragraph</p>
-                <p>If you are under 16, you may need your parent or carer’s consent to be referred.</p>
-                <p><a href=\"\" title=\"\">Link</a></p>
-                <h3>Subheading</h3>
-                <p>Paragraph</p>
+                <p>Your CAMHS team should talk to you about leaving CAMHS 3 to 6 months before you go. This will help give you time to prepare for moving on.</p>
+                <p>You will probably have lots of questions, so make sure you ask your CAMHS team about anything you are worried about.</p>
+                <p><a href=\"https://www.annafreud.org/on-my-mind/receiving-support/moving-on/\" title=\"The Anna Freud centre - Moving on \">The Anna Freud centre has lots of information about moving on from support</a>, including answers to common questions.</p>
                 "
               }) }}
-
 
               <!-- 2nd task -->
               {% from 'details/macro.njk' import details %}
                 {{ details({
                   "classes": "nhsuk-expander",
-                  "text": "Two",
+                  "text": "You’ll make a plan",
                   "HTML": "
-                  <h2>Heading</h2>
-                  <p>Paragraph</p>
+                  <p>You will work together with your CAMHS team to make a plan, including:</p>
                   <ul>
-                    <li>list</li>
-                    <li>list</li>
-                    <li>list</li>
+                    <li>what to do if you need help from CAMHS again</li>
+                    <li>who to contact in a crisis, or if you need urgent support</li>
+                    <li>ways to help manage your mental health yourself (self-management)</li>
                   </ul>
-                  <p>paragraph</p>
-                  <p>If you are under 16, you may need your parent or carer’s consent to be referred.</p>
-                  <p><a href=\"\" title=\"\">Link</a></p>
-                  <h3>Subheading</h3>
-                  <p>Paragraph</p>
+                  <p><a href=\"https://www.annafreud.org/media/15030/my-self-care-plan-secondary.pdf\" title=\"Anna Freud Centre- self care PDF\">You could use Anna Freud’s self-care plan (PDF) as a guide to supporting yourself.</a></p>
                   "
                 }) }}
 
@@ -119,50 +111,98 @@
                 {% from 'details/macro.njk' import details %}
                   {{ details({
                     "classes": "nhsuk-expander",
-                    "text": "Three",
+                    "text": "Transferring your care",
                     "HTML": "
-                    <h2>Heading</h2>
-                    <p>Paragraph</p>
+                    <p>If you’re moving on to a different service, your CAMHS team will share information about you so that the new service will know about:</p>
                     <ul>
-                      <li>list</li>
-                      <li>list</li>
-                      <li>list</li>
+                      <li>what work you've done</li>
+                      <li>what difficulties you may have experienced</li>
+                      <li>what's helped you </li>
+                      <li>how you hope the the new service could help</li>
                     </ul>
-                    <p>paragraph</p>
-                    <p>If you are under 16, you may need your parent or carer’s consent to be referred.</p>
-                    <p><a href=\"\" title=\"\">Link</a></p>
-                    <h3>Subheading</h3>
-                    <p>Paragraph</p>
+                    <p>This will only be done with your permission and consent.</p>
                     "
                   }) }}
-                  <!-- 4th task -->
+                <!-- 4th task -->
                 {% from 'details/macro.njk' import details %}
                   {{ details({
                     "classes": "nhsuk-expander",
-                    "text": "Four",
+                    "text": "Build your support network",
                     "HTML": "
-                    <<h2>Heading</h2>
-                    <p>Paragraph</p>
-                    <ul>
-                      <li>list</li>
-                      <li>list</li>
-                      <li>list</li>
-                    </ul>
-                    <p>paragraph</p>
-                    <p>If you are under 16, you may need your parent or carer’s consent to be referred.</p>
-                    <p><a href=\"\" title=\"\">Link</a></p>
-                    <h3>Subheading</h3>
-                    <p>Paragraph</p>
+                    <p>During this time, it can be a good idea to think about where else you can get support if you need it. This might be from friends, family, your school or other mental health services.</p>
+                    <p>Read about the different types of support you could get from <a href=\"charities-and-other-services\" title=\"NHS CYPMHS charities and other services information\">charities and other services</a></p>
                     "
                   }) }}
 
+                  <!-- 5th task -->
                   {% from 'details/macro.njk' import details %}
-
                   {{ details({
                     "classes": "nhsuk-expander",
-                    "text": "Five",
+                    "text": "If you don’t want to leave CAMHS",
                     "HTML": "
-                    <h2>Heading</h2>
+                    <p>If you don’t feel you are ready to move on, talk to your CAMHS team about this. Let them know about any concerns you have, especially if there is anything you haven’t felt able to tell them before and why you feel you still need support.</p>
+                    <p>If it’s not possible to keep receiving support from CAMHS, they should let you know about other support and services available to you when you leave.</p>
+                    <p>Read about the different types of support you could get from <a href=\"charities-and-other-services\" title=\"NHS CYPMHS charities and other services information\">charities and other services</a></p>
+                    "
+                  }) }}
+                </section>
+                <section>
+                  <h2>Moving on to adult mental health services</h2>
+                  <p>When you reach 18, and if you still need support for your mental health, your CAMHS team will talk to you about moving on to adult mental health services (AMHS)</p>
+                  <p>This usually happens at 18 but in some areas this transition may happen at 16 or 21.</p>
+                  <!-- 1st task -->
+                  {% from 'details/macro.njk' import details %}
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "You’ll be given time to prepare",
+                    "HTML": "
+                    <p>Your CAMHS team should talk to you about moving on to adult mental health services at least 6 months before you go. </p>
+                    <p>This will help give you time to prepare and ask any questions you have, including:</p>
+                    <ul>
+                      <li>Who will be involved in your care</li>
+                      <li>If your family will still be involved</li>
+                      <li>Whether there will be a wait for support</li>
+                    </ul>
+                    "
+                  }) }}
+                  <!-- 2nd task -->
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "You’ll make a plan",
+                    "HTML": "
+                    <p>If you're moving to Adult Mental Health Services, you should be under something called the Care Programme Approach (CPA).</p>
+                    <p>This means you should have:</p>
+                    <ul>
+                      <li>a care co-ordinator –someone who manages your care and is the person to contact if you have questions</li>
+                      <li>a care plan – this says what treatment and support you need, who will provide that support, and the support you might need in a crisis. You should be given a written copy of this plan.</li>
+                    </ul>
+                    <p>If you're not sure whether you're under the CPA plan, or have not been given a written copy of your care plan, speak to someone in your CAMHS team.</p>
+                    "
+                  }) }}
+                  <!-- 3rd task -->
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "Your appointment with adult mental health services (AMHS)",
+                    "HTML": "
+                    <p>Your CAMHS team should refer you for an appointment with AMHS. If you don’t hear anything, check to make sure this happening.</p>
+                    <p>This appointment is to help work out what support you need, and to see if you are eligible for adult mental health services.</p>
+                    <p>There should be someone from your CAMHS team at this appointment.</p>
+                    "
+                  }) }}
+                  <!-- 4th task -->
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "Adult mental health services",
+                    "HTML": "
+                    <p>If you are eligible for adult services, your CAMHS worker should help you through the process of moving from one service to the other. This might include sharing information about you with adult mental health services. This will only be one with your permission and consent. </p>
+                    <p><a href=\"https://www.nhs.uk/nhs-services/mental-health-services/\" title=\"NHS - Mental health services\">Read more about adult mental health services</a></p>
+                    "
+                  }) }}
+                  <!-- 5th task -->
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "What happens if I can't get help from the NHS as an adult",
+                    "HTML": "
                     <p>Paragraph</p>
                     <ul>
                       <li>list</li>
@@ -170,7 +210,7 @@
                       <li>list</li>
                     </ul>
                     <p>paragraph</p>
-                    <p>If you are under 16, you may need your parent or carer’s consent to be referred.</p>
+
                     <p><a href=\"\" title=\"\">Link</a></p>
                     <h3>Subheading</h3>
                     <p>Paragraph</p>
