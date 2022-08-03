@@ -1,0 +1,141 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout_sub-topic.html' %}
+{% set base_path = "../../" %}
+{% set page_title = "Waiting for support" %}
+{% set page_link = "Waiting for support" %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+    {% from 'breadcrumb/macro.njk' import breadcrumb %}
+    {{ breadcrumb({
+    items: [
+      {
+        href: "https://www.nhs.uk",
+        text: "Home"
+      },
+      {
+        href: "/",
+        text: "Mental health support for children and young people"
+      }
+    ],
+    href: "/getting-help-from-the-NHS",
+    text: "Getting help from the NHS"
+    }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>
+      Waiting for support
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Getting help from the NHS</span>
+    </h1>
+
+    <p><b>Just as we go to the doctors when we are physically ill, sometimes we need extra help with our mental health.</b></p>
+    <p>If you’re going to receive support for your mental health, it can be helpful to know a bit more about what to expect.</p>
+    {% include "includes/urgent-care-card.html" %}
+        <div>
+          <section>
+
+            <!-- 1st task -->
+            {% from 'details/macro.njk' import details %}
+              {{ details({
+                "classes": "nhsuk-expander",
+                "text": "Expander heading",
+                "HTML": "
+
+                "
+              }) }}
+
+
+              <!-- 2nd task -->
+              {% from 'details/macro.njk' import details %}
+                {{ details({
+                  "classes": "nhsuk-expander",
+                  "text": "Expander heading",
+                  "HTML": "
+
+                  "
+                }) }}
+
+
+                <!-- 3rd task -->
+                {% from 'details/macro.njk' import details %}
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "Expander heading",
+                    "HTML": "
+
+                    "
+                  }) }}
+
+                  <!-- 4th task -->
+                  {% from 'details/macro.njk' import details %}
+                    {{ details({
+                      "classes": "nhsuk-expander",
+                      "text": "Expander heading",
+                      "HTML": "
+
+                      "
+                    }) }}
+
+                  {% from 'details/macro.njk' import details %}
+
+                  {% from 'details/macro.njk' import details %}
+                    {{ details({
+                      "classes": "nhsuk-expander",
+                      "text": "Expander heading",
+                      "HTML": "
+
+                      "
+                    }) }}
+
+
+                </section>
+              </div>
+              <div class="nhsuk-u-margin-top-6 ">
+                <div class="beta-hub-related-links-title" title="">
+                  <h2 class="nhsuk-heading-s ">Helpful resources</h2>
+                </div>
+                <ul class="beta-hub-related-links">
+                  <li class="beta-hub-related-links__list-item">
+                    <a href="https://www.annafreud.org/on-my-mind/receiving-support" title="">Anna Freud - Receiving support</a>
+                    <div>https://www.annafreud.org/on-my-mind/receiving-support<div>
+                  </li>
+                </ul>
+              </div>
+              {% include "includes/mini-step-nav.html" %}
+              <!--{% include "includes/nhs-child-nav.html" %}-->
+      <!-- End of content -->
+    </div>
+  </div>
+{% endblock %}

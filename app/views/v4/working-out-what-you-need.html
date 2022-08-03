@@ -1,0 +1,193 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout_sub-topic.html' %}
+{% set base_path = "../../" %}
+{% set page_title = "Working out what support you need" %}
+{% set page_link = "Working out what support you need" %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+    {% from 'breadcrumb/macro.njk' import breadcrumb %}
+    {{ breadcrumb({
+    items: [
+      {
+        href: "https://www.nhs.uk",
+        text: "Home"
+      },
+      {
+        href: "/",
+        text: "Mental health support for children and young people"
+      }
+    ],
+    href: "/getting-help-from-the-NHS",
+    text: "Getting help from the NHS"
+    }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>
+      Working out what support you need
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Getting help from the NHS</span>
+    </h1>
+
+    <p><b>If you’ve been referred to your local children and adolescent mental health services (CAMHS), they will work with you to understand what support you need. </b></p>
+    <p>If you are a parent or carer, and your child under 16, you may be asked to be involved in these discussions, but in some cases CAMHS may suggest they speak to your child alone.</p>
+    {% include "includes/urgent-care-card.html" %}
+        <div>
+          <section>
+            <!-- 1st task -->
+            {% from 'details/macro.njk' import details %}
+              {{ details({
+                "classes": "nhsuk-expander",
+                "text": "Contact from your local service",
+                "HTML": "
+                <p>You should be contacted by you local CAMHS service.</p>
+                <p>They may:</p>
+                <ul>
+                  <li>ask for more information about the problems you are experiencing - from you, or the person who referred you</li>
+                  <li>offer you a first appointment with a mental health professional</li>
+                </ul>
+                <p>If you’re asked for more information, try and give as much detail as you can to make sure you get the support you need.</p>
+                <p>In some cases, you may be told CAMHS isn’t suitable for your needs and they may suggest a different type of service or support.</p>
+                <p><a href=\"https://www.youngminds.org.uk/young-person/your-guide-to-support/guide-to-camhs/\" title=\"Young minds - A guide for young people - Guide to CAMHS\">Read more on the  YoungMinds website about the type of support CAMHS offer.</a></p>
+                "
+              }) }}
+
+
+              <!-- 2nd task -->
+              {% from 'details/macro.njk' import details %}
+                {{ details({
+                  "classes": "nhsuk-expander",
+                  "text": "Prepare for your first appointment",
+                  "HTML": "
+                  <p>If you are offered an appointment with CAMHS this can be scary, and you may be worried about talking about difficult thoughts and feelings.</p>
+                  <p>Remember, CAMHS are there to help you and whatever you tell them is confidential.</p>
+                  <p>It can help to think about what you want to talk about before your first appointment. You could write down any thoughts, questions or worries to take with you.</p>
+                  <p>Read more on <a href=\"https://www.childline.org.uk/info-advice/your-feelings/mental-health/child-adolescent-mental-health-services/\" title=\"Childline - Child and adolescent mental health services (CAMHS)\">Childline’s website about preparing for your first appointment</a></p>
+                  "
+                }) }}
+
+
+                <!-- 3rd task -->
+                {% from 'details/macro.njk' import details %}
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "Your first appointment",
+                    "HTML": "
+                    <p>Your first appointment will usually be with one or two professionals who are trained in mental health and emotional wellbeing. If you’re under 16 years old, your parents or carer will usually be invited to join for part of this meeting.</p>
+                    <p>It may be face-to-face (at a clinic or at school) or it may be via a phone or video call. And you may be asked to fill in a form before your appointment.</p>
+                    <p>You will be asked to talk about the difficulties that you have been having and the effect they are having on you. You may also be asked to talk about how you hope CAMHS can help you.</p>
+                    <p>Here are some things that are helpful for you to tell them:</p>
+                    <ul>
+                      <li>when your problems started</li>
+                      <li>what you’d like to change</li>
+                      <li>if there's a pattern in the problems, for example keeping a diary can be really helpful</li>
+                      <li>any other general problems (including health problems), and whether any other services support you either now or in the past</li>
+                      <li>any big things that are happening in your life like divorce, bereavement, changing/leaving school or college or any past trauma</li>
+                    </ul>
+                    <p>With this information they will be able to talk to you about the different ways that they might be able to help you.</p>
+                    <p>If there are different types of help available, they should talk you through these (including how long you would need to wait) and agree with you what would be most helpful.</p>
+                    "
+                  }) }}
+
+                <!-- 4th task -->
+                {% from 'details/macro.njk' import details %}
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "Questions to ask",
+                    "HTML": "
+                    <p>It can be helpful to ask:</p>
+                    <ul>
+                      <li>What options are available to me (including from other services)?</li>
+                      <li>How long is the wait for these?</li>
+                      <li>What support is available while I am waiting?</li>
+                      <li>If things change or start getting worse, what should I do?</li>
+                    </ul>
+                    "
+                  }) }}
+
+                  <!-- 5th task -->
+                  {% from 'details/macro.njk' import details %}
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "What happens next",
+                    "HTML": "
+                    <p>At your first appointment you should agree what kind of support will be most helpful.</p>
+                    <p>This could be:</p>
+                    <ul>
+                      <li>information and resources so you can do things on your own to help yourself, called self-management. </li>
+                      <li>a different service, that better meets your needs</li>
+                      <li>therapy, such as counselling, cognitive behavioural therapy (CBT) or family therapy</li>
+                      <li>an appointment with another mental health professional who specialises in certain conditions, for example if you have an eating disorder</li>
+                    </ul>
+                    <p>You will then be given information about the next steps to getting support, including if you have to go on a waiting list.</p>
+                    <p>If it is agreed that CAMHS is not the best service to help you at this time, you will be told about other services that may be able to offer support.</p>
+                    "
+                  }) }}
+
+                  <!-- 6th task -->
+                  {% from 'details/macro.njk' import details %}
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "What if I want a different type of support?",
+                    "HTML": "
+                    <p>It’s possible that you might not be offered the type of support you were expecting or you think you need.</p>
+                    <p>Children and young people’s mental health services should work with you to agree what support is right for you. They should:</p>
+                    <ul>
+                      <li>listen to you</li>
+                      <li>consider your needs and preferences</li>
+                      <li>work out your goals with you and discuss different support options</li>
+                      <li>make sure you take part in any decisions that are made about support you need/are given</li>
+                    </ul>
+                    <p>If you don’t feel like this is happening you can go back to your local CAMHS team to discuss other options.</p>
+                    <p>If you still cannot get the support you need, then there are people who may be able to speak up for you or give you advice. This is called advocacy or being an advocate.</p>
+                    <p>You can find out more about advocacy from:</p>
+                    <ul>
+                      <li><a href=\"https://www.mind.org.uk/information-support/guides-to-support-and-services/advocacy/what-is-advocacy/\" title=\"Mind - Advocacy in mental health\">Mind</a> – a mental health charity providing information and support</li>
+                      <li>Patients advice and liaison services <a href=\"https://www.nhs.uk/nhs-services/hospitals/what-is-pals-patient-advice-and-liaison-service/\" title=\"NHS - What is PALS (Patient Advice and Liaison Service)?\">(PALS)</a> - an NHS service providing confidential advice and support which you can contact through your local hospital</li>
+                    </ul>
+                    <p>You can also do your own research into other services:</p>
+                    <ul>
+                      <li>There is a <a href=\"https://www.annafreud.org/on-my-mind/youth-wellbeing/\" title=\"Anna Freud - Youth wellbeing directory\">youth wellbeing directory</a> on the Anna Freud charity website.</li>
+                      <li><a href=\"https://www.youthaccess.org.uk/services/find-your-local-service\" title=\"Youth access - Find Your Local Service\">You can search for local services on the Youth Access website</a></li>
+                    </ul>
+                    "
+                  }) }}
+
+                </section>
+              </div>
+              {% include "includes/nhs-child-nav.html" %}
+      <!-- End of content -->
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,160 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout_sub-topic.html' %}
+{% set topic_title = "Mental health support for children and young people" %}
+{% set page_link = "Information for parents and carers" %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+    {% from 'breadcrumb/macro.njk' import breadcrumb %}
+    {{ breadcrumb({
+    items: [
+      {
+        href: "https://www.nhs.uk",
+        text: "Home"
+      },
+      {
+        href: "https://www.nhs.uk/mental-health/",
+        text: "Mental health"
+      }
+    ],
+    href: "/",
+    text: "Mental health support for children and young people"
+
+    }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>
+      Information for parents and carers
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Mental health support for children and young people</span>
+    </h1>
+    <p><b>If you’re worried about the mental health of a child or young person, it can be hard to know what to do to help them. You may also feel like you need support for yourself.</b></p>
+    <p>You’re not alone and there are places both you and your child can turn to for help.</p>
+    {% include "includes/urgent-care-card.html" %}
+    <div>
+
+      <section>
+        {% from 'details/macro.njk' import details %}
+          {{ details({
+            "classes": "nhsuk-expander",
+            "text": "Understanding how a child or young person is feeling",
+            "HTML": "
+            <p>It can be a good idea to find out more about how a child or young person might be feeling. This can help you understand how best to help them, or help them find ways to support themselves.</p>
+            <p>You can read more about how a child or young person might be feeling in our <a href=\"https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/\" title=\"NHS advice for parents\">advice for parents</a> or read more about <a href=\"https://www.nhs.uk/mental-health/conditions/\" title =\"NHS mental health conditions\">mental health conditions</a>.</p>
+            <p>The charity <a href=\"https://www.youngminds.org.uk\" title=\"Young Minds A-Z guide\">YoungMinds</a> also has lots of information for parents including:</p>
+            <ul>
+              <li><a href=\"https://www.youngminds.org.uk/parent/parents-a-z-mental-health-guide/\" title=\"Young Minds A-Z guide\">YoungMinds: A-Z guide for parents</a></li>
+              <li><a href=\"https://www.youngminds.org.uk/parent/parents-guide-to-looking-after-yourself/\" title=\"Young Minds Parents survival guide\">YoungMinds: parents survival guide</a></li>
+            </ul>
+            <p>These include tips on how to talk to your child about their mental health.</p>
+            "
+          }) }}
+
+          {% from 'details/macro.njk' import details %}
+            {{ details({
+              "classes": "nhsuk-expander",
+              "text": "When to seek professional help",
+              "HTML": "
+              <p>It can be difficult to know when and how to get professional support for your child.</p>
+              <p>If your child is feeling low or anxious for a prolonged period of time, or if you have any serious concerns about how your child is feeling or acting, you may want to seek more professional help.</p>
+              <p>You may find it helpful to speak to:</p>
+              <ul>
+                <li>a GP</li>
+                <li>someone you trust at school or college – for example, a teacher, school nurse or special educational needs co-ordinator (SENCO)</li>
+                <li>a health visitor</li>
+                <li>a local children's centre</li>
+              </ul>
+              <p><a href=\"https://www.youngminds.org.uk/parent/parents-a-z-mental-health-guide/getting-help-for-your-child/\">YoungMinds has more information about getting help for your child’s mental health.</a>
+              "
+            }) }}
+
+            {% from 'details/macro.njk' import details %}
+              {{ details({
+                "classes": "nhsuk-expander",
+                "text": "Get help from the NHS",
+                "HTML": "
+                <p>Children and young people’s mental health services (CYPMHS) are NHS services for anyone under 18, including young children, who are struggling with their mental health.</p>
+                <p>You may also hear these called children and adolescent mental health services (CAMHS).</p>
+                <p>CAMHS cover a range of mental health issues and provide treatment and support including talking therapies such as counselling, family therapy and medicines.</p>
+                <p>A child or young person under 16 will usually need consent from a parent or carer to get help from these services. And they will also usually need to get a referral from a GP, or other professionals working with children such as a teacher, youth worker or social worker.</p>
+                <p>Read more in our information for <a href=\"/getting-help-from-the-NHS\" title=\"NHS Mental health services and support for children and young people\">children and young people on how to get help from NHS mental health services</a>.</p>
+                "
+              }) }}
+
+              {% from 'details/macro.njk' import details %}
+                {{ details({
+                  "classes": "nhsuk-expander",
+                  "text": "Get support for yourself",
+                  "HTML": "
+                  <p>Looking after a child with mental health issues isn’t easy and it’s important you look after yourself as well as your child.</p>
+                  <p>There are a number of organisations you can go to for support and information as a parent or carer.</p>
+                  <h3>Support for you</h3>
+
+                  <h4>YoungMinds</h4>
+                  <p><a href=\"https://www.youngminds.org.uk\" title=\"YoungMinds website\">YoungMinds</a> offers free confidential online and telephone advice and emotional support to anyone worried about a child or young person up to the age of 25. </p>
+                  <ul>
+                    <li>call the free parents' helpline on 0808 802 5544 from 9.30am to 4pm, Monday to Friday</li>
+                    <li>email <a href=\"mailto:parents@youngminds.org.uk\" title=\"email YoungMinds\">parents@youngminds.org.uk</a> and YoungMinds will respond to your query within 3 working days</li>
+                  </ul>
+
+                  <h4>Anna Freud</h4>
+                  <p><a href=\"https://www.annafreud.org/parents-and-carers/\" title=\"Anna Freud website\">The Anna Freud Centre has an information hub for parents and carers</a> including advice on looking after yourself.</p>
+
+                  <h4>Every Mind Matters</h4>
+                  <p><a href=\"https://www.nhs.uk/every-mind-matters/supporting-others/childrens-mental-health/\" title=\"NHS - Every Mind Matters\">Every mind matters</a> provides information for parents and carers on looking after a young person’s mental health</p>
+
+                  <h4>MindEd</h4>
+                  <p><a href=\"https://mindedforfamilies.org.uk\" title=\"MindEd for families website\">MindEd for families</a> is an online e-portal offering free, simple advice about children and young people's mental health for all adults.</p>
+
+                  <h4>Royal College of Psychiatrists</h4>
+                  <p>The <a href=\"https://www.rcpsych.ac.uk/mental-health/parents-and-young-people\" title=\"Royal College of Psychiatrists website\">Royal College of Psychiatrists</a> include mental health information tailored for young people, parents, teachers and carers.</p>
+
+                  <h3>Connect with others</h3>
+                  <p>Many parents find it helpful to speak to other parents and carers supporting children with mental health issues. </p>
+
+                  <h4>The PLACE</h4>
+                  <p><a href=\"https://charliewaller.org/place-parent-support\" title=\"The PLACE parent support network\">The PLACE parent support network includes information on local and online support groups </a>.</p>
+
+                  <h3>Support for your child</h3>
+                  <p><a href=\"/charities-and-other-services\" title=\"Charities and other services\">Find out about charity services and support for children and young people</a>.</p>
+                  "
+                }) }}
+
+      </section>
+    </div>
+    {% include "includes/sub-topic-nav.html" %}
+      <!-- End of content -->
+    </div>
+  </div>
+{% endblock %}
