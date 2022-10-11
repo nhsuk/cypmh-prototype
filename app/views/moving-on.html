@@ -5,6 +5,7 @@
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'layout_sub-topic.html' %}
 {% set base_path = "../../" %}
+{% set parent_page_title = "Steps for getting help" %}
 {% set page_title = "Moving on" %}
 <!--
   In /views/layout.html you can:
@@ -37,8 +38,8 @@
         text: "Mental health support for children and young people"
       }
     ],
-    href: "/getting-help-from-the-NHS",
-    text: "Getting help from the NHS"
+    href: "/steps-for-getting-help",
+    text: "Steps for getting help"
     }) }}
 {% endblock %}
 
@@ -55,8 +56,8 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1>
-      Moving on
-      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Getting help from the NHS</span>
+      {{ page_title }}
+      <!--<span class="nhsuk-caption-xl nhsuk-caption--bottom">Getting help from the NHS</span>-->
     </h1>
     <p><b>At some point you may move on from getting support from CAMHS.</b></p>
     <p>This might be because:</p>
@@ -66,7 +67,6 @@
       <li>You are over 18 and adult mental health services may be more suitable for you</li>
     </ul>
     <p>Moving on from the support you know can be scary and you may need extra help and information during this time.</p>
-      {% include "includes/urgent-care-card.html" %}
         <div>
           <section>
             <h2>Changing or finishing your support and treatment</h2>

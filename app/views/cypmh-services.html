@@ -1,0 +1,147 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout_sub-topic.html' %}
+{% set parent_page_title = "Mental health support for children and young people" %}
+{% set page_title = "Children and young people's (CYP) mental health services" %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+    {% from 'breadcrumb/macro.njk' import breadcrumb %}
+    {{ breadcrumb({
+    items: [
+      {
+        href: "https://www.nhs.uk",
+        text: "Home"
+      },
+      {
+        href: "https://www.nhs.uk/mental-health/",
+        text: "Mental health"
+      }
+    ],
+    href: "/",
+    text: "Mental health support for children and young people"
+    }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>
+      {{ page_title }}
+      <!--<span class="nhsuk-caption-xl nhsuk-caption--bottom">Mental health support for children and young people</span>-->
+    </h1>
+
+
+    <p><b>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</b></p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    {% include "includes/urgent-care-card.html" %}
+
+    <h2>Heading 2</h2>
+    <p>Link to <a class="" href="/camhs-information">Information about CAHMS</a> page</p>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+    <ul>
+      <li>bullet point</li>
+      <li>bullet point</li>
+      <li>bullet point</li>
+      <li>bullet point</li>
+    </ul>
+
+
+    <div>
+      <section>
+
+        <!-- 1st task -->
+        {% from 'details/macro.njk' import details %}
+          {{ details({
+            "classes": "nhsuk-expander",
+            "text": "Expander heading",
+            "HTML": "
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            <ul>
+              <li>bullet point</li>
+              <li>bullet point</li>
+              <li>bullet point</li>
+              <li>bullet point</li>
+            </ul>
+            "
+          }) }}
+
+
+          <!-- 2nd task -->
+          {% from 'details/macro.njk' import details %}
+            {{ details({
+              "classes": "nhsuk-expander",
+              "text": "Expander heading",
+              "HTML": "
+
+              "
+            }) }}
+
+
+            <!-- 3rd task -->
+            {% from 'details/macro.njk' import details %}
+              {{ details({
+                "classes": "nhsuk-expander",
+                "text": "Expander heading",
+                "HTML": "
+
+                "
+              }) }}
+
+              <!-- 4th task -->
+              {% from 'details/macro.njk' import details %}
+                {{ details({
+                  "classes": "nhsuk-expander",
+                  "text": "Expander heading",
+                  "HTML": "
+
+                  "
+                }) }}
+
+              {% from 'details/macro.njk' import details %}
+
+              {% from 'details/macro.njk' import details %}
+                {{ details({
+                  "classes": "nhsuk-expander",
+                  "text": "Expander heading",
+                  "HTML": "
+
+                  "
+                }) }}
+
+
+            </section>
+          </div>
+
+
+{% include "includes/sub-topic-nav.html" %}
+  </div>
+</div>
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

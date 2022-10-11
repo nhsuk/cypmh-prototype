@@ -1,0 +1,194 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout_sub-topic.html' %}
+{% set base_path = "../../" %}
+{% set parent_page_title = "Steps for getting help" %}
+{% set page_title = "Having a conversation with a mental health professional" %}
+
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+    {% from 'breadcrumb/macro.njk' import breadcrumb %}
+    {{ breadcrumb({
+    items: [
+      {
+        href: "https://www.nhs.uk",
+        text: "Home"
+      },
+      {
+        href: "/",
+        text: "Mental health support for children and young people"
+      }
+    ],
+    href: "/steps-for-getting-help",
+    text: "Steps for getting help"
+    }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>
+      {{ page_title }}
+      <!--<span class="nhsuk-caption-xl nhsuk-caption--bottom">Steps for getting help</span>-->
+    </h1>
+
+    <p><b>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</b></p>
+    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
+
+        <div>
+          <section>
+            <!-- 1st task -->
+            {% from 'details/macro.njk' import details %}
+              {{ details({
+                "classes": "nhsuk-expander",
+                "text": "Expander heading",
+                "HTML": "
+                <p>Paragraph.</p>
+                <p>Paragraph:</p>
+                <ul>
+                  <li>list</li>
+                  <li>list</li>
+                </ul>
+                <p>Paragraph</p>
+                <p>Paragraph</p>
+                <p><a href=\"xxx/\" title=\"link title\">Link text</a></p>
+                "
+              }) }}
+
+
+              <!-- 2nd task -->
+              {% from 'details/macro.njk' import details %}
+                {{ details({
+                  "classes": "nhsuk-expander",
+                  "text": "Expander heading",
+                  "HTML": "
+                  <p>Paragraph.</p>
+                  <p>Paragraph.</p>
+                  <p>Paragraph</p>
+                  <p>Paragraph <a href=\"xxx/\" title=\"link title\">link text</a></p>
+                  "
+                }) }}
+
+
+                <!-- 3rd task -->
+                {% from 'details/macro.njk' import details %}
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "Expander heading",
+                    "HTML": "
+                    <p>Paragraph.</p>
+                    <p>Paragraph.</p>
+                    <p>Paragraph.</p>
+                    <p>Paragraph:</p>
+                    <ul>
+                      <li>list</li>
+                      <li>list</li>
+                      <li>list</li>
+                      <li>list</li>
+                      <li>list</li>
+                    </ul>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                    "
+                  }) }}
+
+                <!-- 4th task -->
+                {% from 'details/macro.njk' import details %}
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "Expander heading",
+                    "HTML": "
+                    <p>It can be helpful to ask:</p>
+                    <ul>
+                      <li>list</li>
+                      <li>list</li>
+                      <li>list</li>
+                      <li>list</li>
+                    </ul>
+                    "
+                  }) }}
+
+                  <!-- 5th task -->
+                  {% from 'details/macro.njk' import details %}
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "Expander heading",
+                    "HTML": "
+                    <p>Paragraph</p>
+                    <p>Paragraph:</p>
+                    <ul>
+                      <li>list</li>
+                      <li>list</li>
+                      <li>list</li>
+                      <li>list</li>
+                    </ul>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                    "
+                  }) }}
+
+                  <!-- 6th task -->
+                  {% from 'details/macro.njk' import details %}
+                  {{ details({
+                    "classes": "nhsuk-expander",
+                    "text": "Expander heading",
+                    "HTML": "
+                    <p>Paragraph</p>
+                    <p>Paragraph:</p>
+                    <ul>
+                      <li>list</li>
+                      <li>list</li>
+                      <li>list</li>
+                      <li>list</li>
+                    </ul>
+                    <p>Paragraph</p>
+                    <p>Paragraph</p>
+                    <p>Paragraph:</p>
+                    <ul>
+                      <li><a href=\"xxx/\" title=\"link title\">link text</a> – list text</li>
+                      <li>list text <a href=\"xxx/\" title=\"link title\">link text</a> - list text</li>
+                    </ul>
+                    <p>Paragraph:</p>
+                    <ul>
+                      <li>List text <a href=\"xxx/\" title=\"link title\">link text</a> list text.</li>
+                      <li><a href=\"link title\" title=\"link title\">link text</a></li>
+                    </ul>
+                    "
+                  }) }}
+
+                </section>
+              </div>
+              {% include "includes/mini-step-nav.html" %}
+      <!-- End of content -->
+    </div>
+  </div>
+{% endblock %}

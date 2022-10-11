@@ -4,7 +4,7 @@
 
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'layout_sub-topic.html' %}
-{% set topic_title = "Mental health support for children and young people" %}
+{% set parent_page_title = "Mental health support for children and young people" %}
 {% set page_title = "Steps for getting help" %}
 <!--
   In /views/layout.html you can:
@@ -48,19 +48,17 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1>
-      Steps for getting help
-      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Mental health support for children and young people</span>
+      {{ page_title }}
+      <!--<span class="nhsuk-caption-xl nhsuk-caption--bottom">Mental health support for children and young people</span>-->
     </h1>
-
-
-    <p><b>iuhdfqhfohfoehfoe;hif</b></p>
-    <p>h;fhjoef</p>
+    <p><b>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.</b></p>
+    <p> quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga</p>
     {% include "includes/urgent-care-card.html" %}
   <div>
     <div id="step-by-step-navigation" class="app-step-nav app-step-nav--large app-step-nav--active" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all" data-hide-all-text="Hide all">
         <ol class="app-step-nav__steps">
     <!-- step 1 -->
-          <li class="app-step-nav__step js-step" id="referral" >
+          <li class="app-step-nav__step js-step" id="seeking" >
             <div class="app-step-nav__header js-toggle-panel" data-position="1">
               <h2 class="app-step-nav__title">
                 <span class="app-step-nav__circle app-step-nav__circle--number">
@@ -71,19 +69,19 @@
                   </span>
                 </span>
                 <span class="js-step-title">
-                  Getting referred
+                  Seeking help - what you need to do
                 </span>
               </h2>
             </div>
-            <div class="app-step-nav__panel js-panel js-hidden" id="referral-1">
+            <div class="app-step-nav__panel js-panel js-hidden" id="seeking-1">
               <div class="app-step-nav__paragraph">
-                <p class="app-step-nav__paragraph">To use NHS-funded mental health services, you will either need a referral from a GP, teacher, social worker or youth worker. Or you may be able to refer yourself (or your parent or carer can refer you).<p>
-                <p class="app-step-nav__paragraph"><a href="/referrals">Find out more about how you can get a referral</a></p>
+                <p class="app-step-nav__paragraph"><p>
+                <p class="app-step-nav__paragraph"><a href="/seeking-help">Find out more about seeking help</a></p>
               </div>
             </div>
           </li>
     <!-- step 2-->
-          <li class="app-step-nav__step js-step" id="need" >
+          <li class="app-step-nav__step js-step" id="having" >
             <div class="app-step-nav__header js-toggle-panel" data-position="2">
               <h2 class="app-step-nav__title">
                 <span class="app-step-nav__circle app-step-nav__circle--number">
@@ -94,20 +92,20 @@
                   </span>
                 </span>
                 <span class="js-step-title">
-                  Working out what help you need
+                  Having a conversation with a mental health professional
                 </span>
               </h2>
             </div>
-            <div class="app-step-nav__panel js-panel js-hidden" id="need-2">
-              <p class="app-step-nav__paragraph">After you’ve been referred, the mental health service will look at your personal information and think about what support you might need (this is called triage).</p>
-              <p class="app-step-nav__paragraph">They may get in touch with you, or the person who referred you, to find out more information to help them make that decision. </p>
-              <p class="app-step-nav__paragraph">You may then be offered an appointment to talk to a mental health professional. Or you may be referred to a different service. You may also be given information and resources so you can do things on your own to help yourself, called self-management.</p>
-              <p class="app-step-nav__paragraph"><a href="/working-out-what-you-need">Read more about working out what help you need</a></p>
+            <div class="app-step-nav__panel js-panel js-hidden" id="having-2">
+              <p class="app-step-nav__paragraph"></p>
+              <p class="app-step-nav__paragraph"></p>
+              <p class="app-step-nav__paragraph"></p>
+              <p class="app-step-nav__paragraph"><a href="/having-a-conversation">Read more about having a conversation</a></p>
             </div>
           </li>
 
           <!-- step 3 -->
-          <li class="app-step-nav__step js-step" id="waiting" >
+          <li class="app-step-nav__step js-step" id="getting" >
             <div class="app-step-nav__header js-toggle-panel" data-position="3">
               <h2 class="app-step-nav__title">
                 <span class="app-step-nav__circle app-step-nav__circle--number">
@@ -118,26 +116,18 @@
                   </span>
                 </span>
                 <span class="js-step-title">
-                  Waiting for support
+                  Getting advice and help for your needs
                 </span>
               </h2>
             </div>
-            <div class="app-step-nav__panel js-panel js-hidden" id="waiting-2">
-              <p class="app-step-nav__paragraph">If you are referred to NHS-funded services, you may have to wait before you are seen by, or hear from, the service.</p>
-              <p class="app-step-nav__paragraph">This can be frustrating if you are struggling with how you are feeling, or if you are a parent or carer and want your child or young person to get help sooner.</p>
-              <p class="app-step-nav__paragraph">There are things you can do while you’re waiting, including:</p>
-              <ul>
-                <li>contacting charity services for support, </li>
-                <li>asking about  ways to help manage how you are feeling (self-management).</li>
-                <li>asking if there are any digital services available</li>
-              </ul>
-              <p class="app-step-nav__paragraph"><a href="/waiting-for-support" title="non nhs services">Link to new Waiting for support page</a></p>
-              <!--<p class="app-step-nav__paragraph"><a href="/charities-and-other-services" title="non nhs services">Find you what support is available from charities</a> or <a href="https://www.nhs.uk/nhs-services/mental-health-services/where-to-get-urgent-help-for-mental-health/" title="Find out where to get urgent help">get urgent help</a>.</p>-->
+            <div class="app-step-nav__panel js-panel js-hidden" id="getting-3">
+              <p class="app-step-nav__paragraph"></p>
+              <p class="app-step-nav__paragraph"><a href="/getting-advice">Find out more about getting advice and help</a></p>
             </div>
           </li>
 
-    <!-- step 4 -->
-          <li class="app-step-nav__step js-step" id="getting" >
+          <!-- step 4 -->
+          <li class="app-step-nav__step js-step" id="waiting" >
             <div class="app-step-nav__header js-toggle-panel" data-position="4">
               <h2 class="app-step-nav__title">
                 <span class="app-step-nav__circle app-step-nav__circle--number">
@@ -148,19 +138,28 @@
                   </span>
                 </span>
                 <span class="js-step-title">
-                  Getting support
+                  Waiting for help
                 </span>
               </h2>
             </div>
-            <div class="app-step-nav__panel js-panel js-hidden" id="getting-2">
-              <p class="app-step-nav__paragraph">The support you are offered will depend on what mental health needs you have and how thy affecting your daily life. It might include self-help resources, therapies such as counselling and cognitive behavioural therapy (CBT), or medicines.</p>
-              <p class="app-step-nav__paragraph"><a href="/getting-support">Find out more about getting support</a></p>
+            <div class="app-step-nav__panel js-panel js-hidden" id="waiting-4">
+              <p class="app-step-nav__paragraph"></p>
+              <p class="app-step-nav__paragraph"></p>
+              <p class="app-step-nav__paragraph"></p>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <p class="app-step-nav__paragraph"><a href="/waiting-for-help" title="Waiting for help">Find out more about waiting for help</a></p>
+              <!--<p class="app-step-nav__paragraph"><a href="/charities-and-other-services" title="non nhs services">Find you what support is available from charities</a> or <a href="https://www.nhs.uk/nhs-services/mental-health-services/where-to-get-urgent-help-for-mental-health/" title="Find out where to get urgent help">get urgent help</a>.</p>-->
             </div>
           </li>
 
+
           <!-- step 5 -->
           <li class="app-step-nav__step js-step" id="moving" >
-            <div class="app-step-nav__header js-toggle-panel" data-position="4">
+            <div class="app-step-nav__header js-toggle-panel" data-position="5">
               <h2 class="app-step-nav__title">
                 <span class="app-step-nav__circle app-step-nav__circle--number">
                   <span class="app-step-nav__circle-inner">
@@ -174,14 +173,14 @@
                 </span>
               </h2>
             </div>
-            <div class="app-step-nav__panel js-panel js-hidden" id="moving-2">
-              <p class="app-step-nav__paragraph">At some point you may move on from the support or treatment you are getting, This might be because:</p>
+            <div class="app-step-nav__panel js-panel js-hidden" id="moving-5">
+              <p class="app-step-nav__paragraph"></p>
               <ul>
-                <li>You no longer need the same support</li>
-                <li>Something has changed and you may need support from a different service </li>
-                <li>You are over 18 and adult mental health services may be more suitable for you</li>
+                <li></li>
+                <li></li>
+                <li></li>
               </ul>
-              <p class="app-step-nav__paragraph">Moving on from the support you know can be scary and you may need extra help and information during this time.</p>
+              <p class="app-step-nav__paragraph"></p>
               <p class="app-step-nav__paragraph"><a href="/moving-on">Find out more about moving on from CAMHS</a></p>
             </div>
           </li>
@@ -189,7 +188,7 @@
         </ol>
       </div>
     </div>
-    
+
 
 {% include "includes/sub-topic-nav.html" %}
   </div>

@@ -4,7 +4,7 @@
 
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'layout_sub-topic.html' %}
-{% set topic_title = "Mental health support for children and young people" %}
+{% set parent_page_title = "Mental health support for children and young people" %}
 {% set page_title = "Information for parents and carers" %}
 <!--
   In /views/layout.html you can:
@@ -56,8 +56,8 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
     <h1>
-      Information for parents and carers
-      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Mental health support for children and young people</span>
+      {{ page_title }}
+      <!--<span class="nhsuk-caption-xl nhsuk-caption--bottom">Mental health support for children and young people</span>-->
     </h1>
     <p><b>If you’re worried about the mental health of a child or young person, it can be hard to know what to do to help them. You may also feel like you need support for yourself.</b></p>
     <p>You’re not alone and there are places both you and your child can turn to for help.</p>
