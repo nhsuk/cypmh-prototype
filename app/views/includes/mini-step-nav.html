@@ -7,7 +7,7 @@
   ] %}
 
 <h2 class="">
-  More steps <!--in <a href="/">Getting help from the NHS</a>-->
+  More steps this one<!--in <a href="/">Getting help from the NHS</a>-->
 </h2>
 <ol class="app-step-nav__steps app-step-nav__mini_steps">
 <!-- step 1 -->
@@ -22,9 +22,9 @@
                 </span>
               </span>
             </span>
-            <span class="js-step-title {% if page_link == item.title %} beta-hub-sibling-nav--current {% endif %}">
+            <span class="js-step-title {% if page_title == item.title %} beta-hub-sibling-nav--current {% endif %}">
               <!--Getting referred-->
-              {% if page_link == item.title %}{% else %}<a href="{{ item.url }}">{% endif %}{{ item.title }}{% if page_link == item.title %}{% else %}</a>{% endif %}
+              {% if page_title == item.title %}{% else %}<a href="{{ item.url }}">{% endif %}{{ item.title }}{% if page_title == item.title %}{% else %}</a>{% endif %}
             </span>
           </h4>
         </div>
@@ -33,80 +33,4 @@
         </div>
       </li>
 {% endfor %}
-<!-- step 2-->
-    <!--  <li class="app-step-nav__step js-step" id="need" >
-        <div class="app-step-nav__header js-toggle-panel" data-position="2">
-          <h2 class="app-step-nav__title">
-            <span class="app-step-nav__circle app-step-nav__circle--number">
-              <span class="app-step-nav__circle-inner">
-                <span class="app-step-nav__circle-background">
-                  <span class="nhsuk-u-visually-hidden">Step</span> 2
-                </span>
-              </span>
-            </span>
-            <span class="js-step-title {% if page_link == item.title %} beta-hub-sibling-nav--current {% endif %}">
-              Working out what help you need
-            </span>
-          </h2>
-        </div>
-        <div class="app-step-nav__panel js-panel js-hidden" id="need-2"></div>
-      </li>
-
-
-      <li class="app-step-nav__step js-step" id="waiting" >
-        <div class="app-step-nav__header js-toggle-panel" data-position="3">
-          <h2 class="app-step-nav__title">
-            <span class="app-step-nav__circle app-step-nav__circle--number">
-              <span class="app-step-nav__circle-inner">
-                <span class="app-step-nav__circle-background">
-                  <span class="nhsuk-u-visually-hidden">Step</span> 3
-                </span>
-              </span>
-            </span>
-            <span class="js-step-title {% if page_link == item.title %} beta-hub-sibling-nav--current {% endif %}">
-              Waiting for support
-            </span>
-          </h2>
-        </div>
-        <div class="app-step-nav__panel js-panel js-hidden" id="waiting-2"> </div>
-      </li>
-
-
-      <li class="app-step-nav__step js-step" id="getting" >
-        <div class="app-step-nav__header js-toggle-panel" data-position="4">
-          <h2 class="app-step-nav__title">
-            <span class="app-step-nav__circle app-step-nav__circle--number">
-              <span class="app-step-nav__circle-inner">
-                <span class="app-step-nav__circle-background">
-                  <span class="nhsuk-u-visually-hidden">Step</span> 4
-                </span>
-              </span>
-            </span>
-            <span class="js-step-title {% if page_link == item.title %} beta-hub-sibling-nav--current {% endif %}">
-              {% if page_link == item.title %}{% else %}<a href="{{ item.url }}">{% endif %}{{ item.title }}{% if page_link == item.title %}{% else %}</a>{% endif %}
-            </span>
-          </h2>
-        </div>
-        <div class="app-step-nav__panel js-panel js-hidden" id="getting-2"></div>
-      </li>
-
-
-      <li class="app-step-nav__step js-step" id="moving" >
-        <div class="app-step-nav__header js-toggle-panel" data-position="4">
-          <h2 class="app-step-nav__title">
-            <span class="app-step-nav__circle app-step-nav__circle--number">
-              <span class="app-step-nav__circle-inner">
-                <span class="app-step-nav__circle-background">
-                  <span class="nhsuk-u-visually-hidden">Step</span> 5
-                </span>
-              </span>
-            </span>
-            <span class="js-step-title {% if page_link == item.title %} beta-hub-sibling-nav--current {% endif %}">
-              Moving on
-            </span>
-          </h2>
-        </div>
-        <div class="app-step-nav__panel js-panel js-hidden" id="moving-2"></div>
-      </li> -->
-
     </ol>
